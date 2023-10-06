@@ -108,7 +108,36 @@ var tower = [
 var enemy = [
 	{
 		"name": "Demon",
-		"asset": "preload()",
+		"health": 100,
+		"speed": 30,
+		"damage": 1
+	},
+	{
+		"name": "Orc",
+		"health": 100,
+		"speed": 30,
+		"damage": 1
+	},
+	{
+		"name": "Cyclops",
+		"health": 100,
+		"speed": 30,
+		"damage": 1
+	},
+	{
+		"name": "Demon Boar",
+		"health": 100,
+		"speed": 30,
+		"damage": 1
+	},
+	{
+		"name": "Demon Fungus",
+		"health": 100,
+		"speed": 30,
+		"damage": 1
+	},
+	{
+		"name": "Demon Shark",
 		"health": 100,
 		"speed": 30,
 		"damage": 1
