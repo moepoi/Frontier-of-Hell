@@ -7,7 +7,7 @@ var config = load(config_path).new()
 
 var spawn_first: bool = true
 
-var enemy: PackedScene = preload("res://scenes/enemies/orc.tscn")
+var enemy: PackedScene = preload("res://scenes/enemies/demon.tscn")
 
 func _ready():
 	summon()

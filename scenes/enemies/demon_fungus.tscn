@@ -1,0 +1,173 @@
+[gd_scene load_steps=21 format=3 uid="uid://sbr727jduiqw"]
+
+[ext_resource type="Script" path="res://scripts/enemies/enemy.gd" id="1_4wu2v"]
+[ext_resource type="Texture2D" uid="uid://bfyws0srbawxx" path="res://assets/spritesheets/enemies/demon-fungus.png" id="2_jkw1p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt5pf"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1536, 2048, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w053b"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(0, 2560, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgmu6"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(512, 2560, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjv30"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1024, 2560, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq10w"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ra4kd"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vppnh"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mx1o8"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1024, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlghv"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1536, 4096, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7dqq"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(0, 4608, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7061"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(512, 4608, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcnku"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1024, 4608, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibux8"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1536, 6144, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daege"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(0, 6656, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv5sd"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(512, 6656, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8ovq"]
+atlas = ExtResource("2_jkw1p")
+region = Rect2(1024, 6656, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5yy3x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt5pf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w053b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgmu6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjv30")
+}],
+"loop": true,
+"name": &"back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq10w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ra4kd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vppnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mx1o8")
+}],
+"loop": true,
+"name": &"front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlghv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7dqq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7061")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcnku")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibux8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daege")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv5sd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8ovq")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5hy1j"]
+radius = 21.0065
+height = 42.013
+
+[node name="Enemy" type="PathFollow2D"]
+rotation = 0.00699289
+rotates = false
+loop = false
+script = ExtResource("1_4wu2v")
+
+[node name="EnemyBody" type="CharacterBody2D" parent="." groups=["Enemy"]]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EnemyBody"]
+position = Vector2(9.15527e-05, 0.00012207)
+scale = Vector2(0.09, 0.089)
+sprite_frames = SubResource("SpriteFrames_5yy3x")
+animation = &"right"
+autoplay = "right"
+frame = 2
+frame_progress = 0.287168
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyBody"]
+position = Vector2(-0.992983, 1.00696)
+shape = SubResource("CapsuleShape2D_5hy1j")
+
+[node name="HealthBar" type="ProgressBar" parent="EnemyBody"]
+modulate = Color(0.431373, 0.815686, 0, 1)
+offset_left = -15.1814
+offset_top = -25.8945
+offset_right = 86.8186
+offset_bottom = 1.10553
+scale = Vector2(0.3, 0.3)
+show_percentage = false

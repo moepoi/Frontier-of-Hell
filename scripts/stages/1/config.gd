@@ -7,6 +7,10 @@ var game = {
 	"offset": [-30.0, 30.0],
 	"path_direction": [
 		{
+			"progress": 0,
+			"direction": "right",
+		},
+		{
 			"progress": 570,
 			"direction": "front"
 		},
