@@ -7,7 +7,7 @@ var config = load(config_path).new()
 
 var spawn_first: bool = true
 
-var enemy: PackedScene = preload("res://scenes/enemies/enemy_1.tscn")
+var enemy: PackedScene = preload("res://scenes/enemies/orc.tscn")
 
 func _ready():
 	summon()
@@ -25,4 +25,5 @@ func summon():
 	add_child(enemy_instance)
 	enemy_instance.set_config(config_path)
 	enemy_instance.set_enemy(0)
+	enemy_instance.set_direction()
 	enemy_instance.set_v_offset(rng.randf_range(config.game['offset'][0], config.game['offset'][1]))

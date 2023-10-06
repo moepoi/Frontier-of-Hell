@@ -4,7 +4,17 @@ class_name Config
 
 var game = {
 	"spawn_timer": 3.0,
-	"offset": [-30.0, 30.0]
+	"offset": [-30.0, 30.0],
+	"path_direction": [
+		{
+			"progress": 570,
+			"direction": "front"
+		},
+		{
+			"progress": 855,
+			"direction": "right"
+		}
+	]
 }
 
 var menu = [
