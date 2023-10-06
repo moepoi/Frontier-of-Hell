@@ -1,0 +1,107 @@
+[gd_scene load_steps=7 format=3 uid="uid://cd5r1v6f8hahx"]
+
+[ext_resource type="Script" path="res://scripts/ui/tower-menu.gd" id="1_h1oqf"]
+[ext_resource type="Theme" uid="uid://d4fqih4gmaixt" path="res://scenes/ui/themes/leltres.tres" id="1_s4ty6"]
+[ext_resource type="Texture2D" uid="uid://dql0j3rmo6lt6" path="res://assets/icons/towers/cannon-1-disabled.png" id="3_3pes3"]
+[ext_resource type="Texture2D" uid="uid://rgnikuo8ht0w" path="res://assets/icons/towers/railgun-1-disabled.png" id="4_8q3ud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55n31"]
+bg_color = Color(0.12549, 0.12549, 0.12549, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 20
+
+[sub_resource type="Theme" id="Theme_6r0bt"]
+
+[node name="TowerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h1oqf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -141.0
+offset_right = 156.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_55n31")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_s4ty6")
+theme_override_constants/separation = 30
+
+[node name="Top" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 125
+
+[node name="MenuTitle" type="Label" parent="Panel/VBoxContainer/Top"]
+layout_mode = 2
+text = "  Build/Upgrade Tower"
+
+[node name="Close" type="Button" parent="Panel/VBoxContainer/Top"]
+layout_mode = 2
+text = "X"
+flat = true
+
+[node name="Middle" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TowerOption" type="TextureButton" parent="Panel/VBoxContainer/Middle"]
+layout_mode = 2
+theme = SubResource("Theme_6r0bt")
+texture_normal = ExtResource("3_3pes3")
+
+[node name="TowerOption2" type="TextureButton" parent="Panel/VBoxContainer/Middle"]
+layout_mode = 2
+theme = SubResource("Theme_6r0bt")
+texture_normal = ExtResource("4_8q3ud")
+
+[node name="Bottom" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="TowerName" type="Label" parent="Panel/VBoxContainer/Bottom"]
+layout_mode = 2
+text = "Cannon"
+
+[node name="TowerName2" type="Label" parent="Panel/VBoxContainer/Bottom"]
+layout_mode = 2
+text = "Railgun"
+
+[node name="Nether" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="TowerPrice" type="Label" parent="Panel/VBoxContainer/Nether"]
+layout_mode = 2
+text = "10000"
+
+[node name="TowerPrice2" type="Label" parent="Panel/VBoxContainer/Nether"]
+layout_mode = 2
+text = "20000"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Top/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Middle/TowerOption" to="." method="_on_tower_option_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Middle/TowerOption2" to="." method="_on_tower_option_2_pressed"]

@@ -1,0 +1,12 @@
+# Git
+.git/
+
+# Godot 4+ specific ignores
+.godot/
+addons/
+
+# Android SDK
+android/
+
+# Build
+build/

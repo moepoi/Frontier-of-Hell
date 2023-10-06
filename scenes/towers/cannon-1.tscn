@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://bexddlltacp6k"]
+
+[ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_qd0ev"]
+[ext_resource type="PackedScene" uid="uid://dqa80ptcc8p70" path="res://scenes/bullets/bullet-1.tscn" id="2_86sw3"]
+[ext_resource type="Texture2D" uid="uid://2ovf2ymtftgo" path="res://assets/spritesheets/towers/cannon-1.png" id="3_rql5q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3x0a2"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8n18"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emmfr"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epw5k"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wfiw"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv4my"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wil8"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6shl"]
+atlas = ExtResource("3_rql5q")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xwnf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3x0a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8n18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emmfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epw5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wfiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv4my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wil8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6shl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmsbt"]
+radius = 138.293
+
+[node name="cannon-1" type="Node2D" groups=["Towers"]]
+script = ExtResource("1_qd0ev")
+bullet = ExtResource("2_86sw3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_5xwnf")
+frame_progress = 0.648704
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wmsbt")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
