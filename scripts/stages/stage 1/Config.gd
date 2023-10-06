@@ -2,6 +2,11 @@ extends Node
 
 class_name Config
 
+var game = {
+	"spawn_timer": 3.0,
+	"offset": [-30.0, 30.0]
+}
+
 var menu = [
 	{
 		"name": "Cannon",
@@ -83,5 +88,15 @@ var tower = [
 		"timer": 0.2,
 		"speed": 200,
 		"damage": 40
+	}
+]
+
+var enemy = [
+	{
+		"name": "Demon",
+		"asset": "preload()",
+		"health": 100,
+		"speed": 30,
+		"damage": 1
 	}
 ]

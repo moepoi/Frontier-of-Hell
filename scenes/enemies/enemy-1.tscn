@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://clceqphyig48x"]
+[gd_scene load_steps=14 format=3 uid="uid://bdkpehb7sykww"]
 
-[ext_resource type="Script" path="res://scripts/stages/stage 1/walk.gd" id="1_ic50n"]
-[ext_resource type="Script" path="res://scripts/enemies/enemy-1.gd" id="2_2ldr2"]
+[ext_resource type="Script" path="res://scripts/enemies/enemy.gd" id="1_oeuts"]
 [ext_resource type="Texture2D" uid="uid://b046l0oy0hyj2" path="res://assets/spritesheets/enemy-1.png" id="2_ndkpn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17kv3"]
@@ -82,23 +81,22 @@ height = 39.999
 [node name="PathFollow2D" type="PathFollow2D"]
 rotation = 0.00699289
 loop = false
-script = ExtResource("1_ic50n")
+script = ExtResource("1_oeuts")
 
-[node name="enemy" type="CharacterBody2D" parent="." groups=["Enemy"]]
-script = ExtResource("2_2ldr2")
+[node name="Enemy" type="CharacterBody2D" parent="." groups=["Enemy"]]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
 position = Vector2(9.15527e-05, 0.00012207)
 scale = Vector2(0.176347, 0.175058)
 sprite_frames = SubResource("SpriteFrames_kipn1")
 autoplay = "default"
 frame_progress = 0.735051
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(-0.992983, 1.00696)
 shape = SubResource("CapsuleShape2D_5hy1j")
 
-[node name="HealthBar" type="ProgressBar" parent="enemy"]
+[node name="HealthBar" type="ProgressBar" parent="Enemy"]
 modulate = Color(0.431373, 0.815686, 0, 1)
 offset_left = -15.1814
 offset_top = -25.8945
@@ -106,7 +104,3 @@ offset_right = 86.8186
 offset_bottom = 1.10553
 scale = Vector2(0.3, 0.3)
 show_percentage = false
-
-[node name="_Timer_66182" type="Timer" parent="."]
-wait_time = 0.2
-one_shot = true

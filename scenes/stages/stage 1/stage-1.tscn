@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=11 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="1_rhsei"]
 [ext_resource type="Script" path="res://scripts/stages/stage 1/GameManager.gd" id="1_yugmb"]
 [ext_resource type="Texture2D" uid="uid://danbfdqmqu23q" path="res://assets/tileset/ashlands/tf_B_ashlands_3.png" id="2_ao304"]
 [ext_resource type="Script" path="res://scripts/stages/stage 1/summon.gd" id="3_wqx3u"]
-[ext_resource type="PackedScene" uid="uid://clceqphyig48x" path="res://scenes/enemies/enemy-1.tscn" id="4_iivll"]
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower-menu.tscn" id="6_p2t31"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="8_ftqhi"]
 
@@ -542,7 +541,9 @@ layer_1/tile_data = PackedInt32Array(196628, 262146, 6, 131089, 2, 13, 720899, 3
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_csucy")
 script = ExtResource("3_wqx3u")
-enemy = ExtResource("4_iivll")
+
+[node name="Timer" type="Timer" parent="Path2D"]
+one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -559,3 +560,5 @@ position = Vector2(676, 192)
 
 [node name="placement3" parent="Placements" instance=ExtResource("8_ftqhi")]
 position = Vector2(844, 393)
+
+[connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
