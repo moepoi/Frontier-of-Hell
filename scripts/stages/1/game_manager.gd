@@ -15,9 +15,6 @@ func _ready():
 	for placement in placements:
 		placement.connect("on_placement", on_game_placement)
 	$CanvasLayer/TowerMenu.connect("build_tower", on_build_tower)
-
-func _process(delta):
-	pass
 	
 func on_game_placement(pos, tower_placement_id):
 	var tower_id = null

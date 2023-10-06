@@ -15,9 +15,6 @@ var current_disabled_2 = false
 func _ready():
 	hide()
 
-func _process(delta):
-	pass
-
 func _on_close_pressed():
 	hide()
 
