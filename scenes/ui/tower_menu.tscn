@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cd5r1v6f8hahx"]
 
-[ext_resource type="Script" path="res://scripts/ui/tower-menu.gd" id="1_h1oqf"]
 [ext_resource type="Theme" uid="uid://d4fqih4gmaixt" path="res://scenes/ui/themes/leltres.tres" id="1_s4ty6"]
+[ext_resource type="Script" path="res://scripts/ui/tower_menu.gd" id="1_wtfbd"]
 [ext_resource type="Texture2D" uid="uid://dql0j3rmo6lt6" path="res://assets/icons/towers/cannon-1-disabled.png" id="3_3pes3"]
 [ext_resource type="Texture2D" uid="uid://rgnikuo8ht0w" path="res://assets/icons/towers/railgun-1-disabled.png" id="4_8q3ud"]
 
@@ -22,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h1oqf")
+script = ExtResource("1_wtfbd")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1

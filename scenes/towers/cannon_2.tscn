@@ -1,39 +1,39 @@
 [gd_scene load_steps=14 format=3 uid="uid://dij57511gfg4t"]
 
-[ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_2xepw"]
-[ext_resource type="PackedScene" uid="uid://dqa80ptcc8p70" path="res://scenes/bullets/bullet-1.tscn" id="2_v72iu"]
-[ext_resource type="Texture2D" uid="uid://br7wgq61n6ufv" path="res://assets/spritesheets/towers/cannon-2.png" id="3_u5fqp"]
+[ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_eyei4"]
+[ext_resource type="PackedScene" uid="uid://dqa80ptcc8p70" path="res://scenes/bullets/bullet_1.tscn" id="2_r6s38"]
+[ext_resource type="Texture2D" uid="uid://br7wgq61n6ufv" path="res://assets/spritesheets/towers/cannon-2.png" id="3_us71t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74asi"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ug5lf"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vs27q"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h1use"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3rr0n"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8pr4"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bagik"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tv6sf"]
-atlas = ExtResource("3_u5fqp")
+atlas = ExtResource("3_us71t")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gp0wd"]
@@ -72,8 +72,8 @@ animations = [{
 radius = 138.293
 
 [node name="cannon-2" type="Node2D" groups=["Towers"]]
-script = ExtResource("1_2xepw")
-bullet = ExtResource("2_v72iu")
+script = ExtResource("1_eyei4")
+bullet = ExtResource("2_r6s38")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)

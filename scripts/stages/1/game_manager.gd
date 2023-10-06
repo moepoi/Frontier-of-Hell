@@ -2,7 +2,7 @@ extends Node2D
 
 class_name GameManager
 
-var config = load("res://scripts/stages/stage 1/Config.gd").new()
+var config = load("res://scripts/stages/1/config.gd").new()
 
 var data = {
 	"tower": {},

@@ -1,7 +1,7 @@
 extends Control
 
 
-var config = load("res://scripts/stages/stage 1/Config.gd").new()
+var config = load("res://scripts/stages/1/config.gd").new()
 
 signal build_tower(pos, tower_id, tower_placement_id)
 

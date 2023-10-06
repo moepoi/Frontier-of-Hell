@@ -49,42 +49,42 @@ var menu = [
 var tower = [
 	{
 		"name": "Cannon",
-		"asset": preload("res://scenes/towers/cannon-1.tscn"),
+		"asset": preload("res://scenes/towers/cannon_1.tscn"),
 		"timer": 0.2,
 		"speed": 200,
 		"damage": 30
 	},
 	{
 		"name": "Railgun",
-		"asset": preload("res://scenes/towers/railgun-1.tscn"),
+		"asset": preload("res://scenes/towers/railgun_1.tscn"),
 		"timer": 0.2,
 		"speed": 200,
 		"damage": 40
 	},
 	{
 		"name": "Cannon (V2)",
-		"asset": preload("res://scenes/towers/cannon-2.tscn"),
+		"asset": preload("res://scenes/towers/cannon_2.tscn"),
 		"timer": 0.2,
 		"speed": 200,
 		"damage": 40
 	},
 	{
 		"name": "Railgun (V2)",
-		"asset": preload("res://scenes/towers/railgun-2.tscn"),
+		"asset": preload("res://scenes/towers/railgun_2.tscn"),
 		"timer": 0.2,
 		"speed": 200,
 		"damage": 40
 	},
 	{
 		"name": "Cannon (V3)",
-		"asset": preload("res://scenes/towers/cannon-3.tscn"),
+		"asset": preload("res://scenes/towers/cannon_3.tscn"),
 		"timer": 0.2,
 		"speed": 200,
 		"damage": 40
 	},
 	{
 		"name": "Railgun (V3)",
-		"asset": preload("res://scenes/towers/railgun-3.tscn"),
+		"asset": preload("res://scenes/towers/railgun_3.tscn"),
 		"timer": 0.2,
 		"speed": 200,
 		"damage": 40

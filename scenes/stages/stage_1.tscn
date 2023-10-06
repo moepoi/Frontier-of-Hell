@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://btdewn34d67m"]
 
-[ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="1_rhsei"]
-[ext_resource type="Script" path="res://scripts/stages/stage 1/GameManager.gd" id="1_yugmb"]
-[ext_resource type="Texture2D" uid="uid://danbfdqmqu23q" path="res://assets/tileset/ashlands/tf_B_ashlands_3.png" id="2_ao304"]
-[ext_resource type="Script" path="res://scripts/stages/stage 1/summon.gd" id="3_wqx3u"]
-[ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower-menu.tscn" id="6_p2t31"]
-[ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="8_ftqhi"]
+[ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
+[ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="2_1njjc"]
+[ext_resource type="Texture2D" uid="uid://danbfdqmqu23q" path="res://assets/tileset/ashlands/tf_B_ashlands_3.png" id="3_l5wod"]
+[ext_resource type="Script" path="res://scripts/stages/1/summon.gd" id="4_gt08o"]
+[ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="5_3w5lp"]
+[ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="6_mao4r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yb1o"]
-texture = ExtResource("1_rhsei")
+texture = ExtResource("2_1njjc")
 texture_region_size = Vector2i(48, 48)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -434,7 +434,7 @@ texture_region_size = Vector2i(48, 48)
 7:14/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knagf"]
-texture = ExtResource("2_ao304")
+texture = ExtResource("3_l5wod")
 texture_region_size = Vector2i(48, 48)
 4:6/size_in_atlas = Vector2i(4, 5)
 4:6/0 = 0
@@ -523,7 +523,7 @@ _data = {
 point_count = 4
 
 [node name="GameManager" type="Node2D"]
-script = ExtResource("1_yugmb")
+script = ExtResource("1_aosti")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_eqd70")
@@ -540,25 +540,25 @@ layer_1/tile_data = PackedInt32Array(196628, 262146, 6, 131089, 2, 13, 720899, 3
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_csucy")
-script = ExtResource("3_wqx3u")
+script = ExtResource("4_gt08o")
 
 [node name="Timer" type="Timer" parent="Path2D"]
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TowerMenu" parent="CanvasLayer" instance=ExtResource("6_p2t31")]
+[node name="TowerMenu" parent="CanvasLayer" instance=ExtResource("5_3w5lp")]
 visible = false
 
 [node name="Placements" type="Node2D" parent="."]
 
-[node name="placement" parent="Placements" instance=ExtResource("8_ftqhi")]
+[node name="placement" parent="Placements" instance=ExtResource("6_mao4r")]
 position = Vector2(313, 326)
 
-[node name="placement2" parent="Placements" instance=ExtResource("8_ftqhi")]
+[node name="placement2" parent="Placements" instance=ExtResource("6_mao4r")]
 position = Vector2(676, 192)
 
-[node name="placement3" parent="Placements" instance=ExtResource("8_ftqhi")]
+[node name="placement3" parent="Placements" instance=ExtResource("6_mao4r")]
 position = Vector2(844, 393)
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]

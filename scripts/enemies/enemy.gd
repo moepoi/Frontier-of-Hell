@@ -20,12 +20,12 @@ func _process(delta):
 	set_progress(get_progress() + speed * delta)
 		
 func update_healthbar():
-	$Enemy/HealthBar.value = health
+	$EnemyBody/HealthBar.value = health
 	
 	if health >= 100:
-		$Enemy/HealthBar.visible = false
+		$EnemyBody/HealthBar.visible = false
 	else:
-		$Enemy/HealthBar.visible = true
+		$EnemyBody/HealthBar.visible = true
 
 func hit(damage : int):
 	health = health - damage

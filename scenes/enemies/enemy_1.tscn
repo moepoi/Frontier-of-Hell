@@ -1,42 +1,42 @@
 [gd_scene load_steps=14 format=3 uid="uid://bdkpehb7sykww"]
 
-[ext_resource type="Script" path="res://scripts/enemies/enemy.gd" id="1_oeuts"]
-[ext_resource type="Texture2D" uid="uid://b046l0oy0hyj2" path="res://assets/spritesheets/enemy-1.png" id="2_ndkpn"]
+[ext_resource type="Script" path="res://scripts/enemies/enemy.gd" id="1_b4ul5"]
+[ext_resource type="Texture2D" uid="uid://b046l0oy0hyj2" path="res://assets/spritesheets/enemy-1.png" id="2_v0ees"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_17kv3"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(0, 1, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wwrx"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(188, 1, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xvkeb"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(376, 1, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_usecb"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(564, 1, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pq6ve"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(752, 1, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ni7yh"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(0, 189, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kmn0w"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(188, 189, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v3qv0"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(376, 189, 188, 188)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hmvpc"]
-atlas = ExtResource("2_ndkpn")
+atlas = ExtResource("2_v0ees")
 region = Rect2(564, 189, 188, 188)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kipn1"]
@@ -78,25 +78,25 @@ animations = [{
 radius = 18.9995
 height = 39.999
 
-[node name="PathFollow2D" type="PathFollow2D"]
+[node name="Enemy" type="PathFollow2D"]
 rotation = 0.00699289
 loop = false
-script = ExtResource("1_oeuts")
+script = ExtResource("1_b4ul5")
 
-[node name="Enemy" type="CharacterBody2D" parent="." groups=["Enemy"]]
+[node name="EnemyBody" type="CharacterBody2D" parent="." groups=["Enemy"]]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Enemy"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EnemyBody"]
 position = Vector2(9.15527e-05, 0.00012207)
 scale = Vector2(0.176347, 0.175058)
 sprite_frames = SubResource("SpriteFrames_kipn1")
 autoplay = "default"
 frame_progress = 0.735051
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyBody"]
 position = Vector2(-0.992983, 1.00696)
 shape = SubResource("CapsuleShape2D_5hy1j")
 
-[node name="HealthBar" type="ProgressBar" parent="Enemy"]
+[node name="HealthBar" type="ProgressBar" parent="EnemyBody"]
 modulate = Color(0.431373, 0.815686, 0, 1)
 offset_left = -15.1814
 offset_top = -25.8945

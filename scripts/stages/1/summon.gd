@@ -2,12 +2,12 @@ extends Path2D
 
 @onready var timer = $Timer
 
-var config_path = "res://scripts/stages/stage 1/Config.gd"
+var config_path = "res://scripts/stages/1/config.gd"
 var config = load(config_path).new()
 
 var spawn_first: bool = true
 
-var enemy: PackedScene = preload("res://scenes/enemies/enemy-1.tscn")
+var enemy: PackedScene = preload("res://scenes/enemies/enemy_1.tscn")
 
 func _ready():
 	summon()
