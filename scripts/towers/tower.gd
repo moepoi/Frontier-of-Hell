@@ -3,7 +3,7 @@ extends Node2D
 @onready var rayCast = $RayCast2D
 @onready var timer = $Timer
 
-@export var bullet: PackedScene = null
+var bullet: PackedScene = null
 
 var config = null
 var tower_id: int = 0
@@ -22,6 +22,7 @@ func set_config(config_path):
 	
 func set_tower(id: int):
 	tower_id = id
+	bullet = config.tower[tower_id]['bullet']
 	health = config.tower[tower_id]['health']
 	damage = config.tower[tower_id]['damage']
 	speed = config.tower[tower_id]['speed']
