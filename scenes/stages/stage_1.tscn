@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=12 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
 [ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="2_1njjc"]
 [ext_resource type="Texture2D" uid="uid://danbfdqmqu23q" path="res://assets/tileset/ashlands/tf_B_ashlands_3.png" id="3_l5wod"]
 [ext_resource type="Script" path="res://scripts/stages/1/summon.gd" id="4_gt08o"]
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="5_3w5lp"]
+[ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="6_hbxxi"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="6_mao4r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yb1o"]
@@ -549,6 +550,8 @@ one_shot = true
 
 [node name="TowerMenu" parent="CanvasLayer" instance=ExtResource("5_3w5lp")]
 visible = false
+
+[node name="GameStats" parent="CanvasLayer" instance=ExtResource("6_hbxxi")]
 
 [node name="Placements" type="Node2D" parent="."]
 

@@ -39,69 +39,80 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_55n31")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
 theme = ExtResource("1_s4ty6")
 theme_override_constants/separation = 30
 
-[node name="Top" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="Top" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 125
 
-[node name="MenuTitle" type="Label" parent="Panel/VBoxContainer/Top"]
+[node name="MenuTitle" type="Label" parent="Panel/MarginContainer/VBoxContainer/Top"]
 layout_mode = 2
+size_flags_horizontal = 3
 text = "  Build/Upgrade Tower"
 
-[node name="Close" type="Button" parent="Panel/VBoxContainer/Top"]
+[node name="Close" type="Button" parent="Panel/MarginContainer/VBoxContainer/Top"]
 layout_mode = 2
 text = "X"
 flat = true
 
-[node name="Middle" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="Middle" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="TowerOption" type="TextureButton" parent="Panel/VBoxContainer/Middle"]
+[node name="TowerOption" type="TextureButton" parent="Panel/MarginContainer/VBoxContainer/Middle"]
 layout_mode = 2
+size_flags_horizontal = 6
 theme = SubResource("Theme_6r0bt")
 texture_normal = ExtResource("3_3pes3")
 
-[node name="TowerOption2" type="TextureButton" parent="Panel/VBoxContainer/Middle"]
+[node name="TowerOption2" type="TextureButton" parent="Panel/MarginContainer/VBoxContainer/Middle"]
 layout_mode = 2
+size_flags_horizontal = 6
 theme = SubResource("Theme_6r0bt")
 texture_normal = ExtResource("4_8q3ud")
 
-[node name="Bottom" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="Bottom" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 60
 alignment = 1
 
-[node name="TowerName" type="Label" parent="Panel/VBoxContainer/Bottom"]
+[node name="TowerName" type="Label" parent="Panel/MarginContainer/VBoxContainer/Bottom"]
 layout_mode = 2
+size_flags_horizontal = 6
 text = "Cannon"
 
-[node name="TowerName2" type="Label" parent="Panel/VBoxContainer/Bottom"]
+[node name="TowerName2" type="Label" parent="Panel/MarginContainer/VBoxContainer/Bottom"]
 layout_mode = 2
+size_flags_horizontal = 6
 text = "Railgun"
 
-[node name="Nether" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="Nether" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 75
 alignment = 1
 
-[node name="TowerPrice" type="Label" parent="Panel/VBoxContainer/Nether"]
+[node name="TowerPrice" type="Label" parent="Panel/MarginContainer/VBoxContainer/Nether"]
 layout_mode = 2
+size_flags_horizontal = 6
 text = "10000"
 
-[node name="TowerPrice2" type="Label" parent="Panel/VBoxContainer/Nether"]
+[node name="TowerPrice2" type="Label" parent="Panel/MarginContainer/VBoxContainer/Nether"]
 layout_mode = 2
+size_flags_horizontal = 6
 text = "20000"
 
-[connection signal="pressed" from="Panel/VBoxContainer/Top/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/Middle/TowerOption" to="." method="_on_tower_option_pressed"]
-[connection signal="pressed" from="Panel/VBoxContainer/Middle/TowerOption2" to="." method="_on_tower_option_2_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Top/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Middle/TowerOption" to="." method="_on_tower_option_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Middle/TowerOption2" to="." method="_on_tower_option_2_pressed"]

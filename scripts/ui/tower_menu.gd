@@ -39,28 +39,28 @@ func show_menu(tower_id, pos, tower_placement_id, disabled, disabled_2):
 	if tower_id != null:
 		current_tower_id = tower_id
 		
-		$Panel/VBoxContainer/Middle/TowerOption2.hide()
-		$Panel/VBoxContainer/Bottom/TowerName2.hide()
-		$Panel/VBoxContainer/Nether/TowerPrice2.hide()
+		$Panel/MarginContainer/VBoxContainer/Middle/TowerOption2.hide()
+		$Panel/MarginContainer/VBoxContainer/Bottom/TowerName2.hide()
+		$Panel/MarginContainer/VBoxContainer/Nether/TowerPrice2.hide()
 	else:
-		$Panel/VBoxContainer/Middle/TowerOption2.show()
-		$Panel/VBoxContainer/Bottom/TowerName2.show()
-		$Panel/VBoxContainer/Nether/TowerPrice2.show()
+		$Panel/MarginContainer/VBoxContainer/Middle/TowerOption2.show()
+		$Panel/MarginContainer/VBoxContainer/Bottom/TowerName2.show()
+		$Panel/MarginContainer/VBoxContainer/Nether/TowerPrice2.show()
 		
 	var image = config.menu[current_tower_id]['image']
 	if current_disabled:
 		image = config.menu[current_tower_id]['image_disabled']
 	
-	$Panel/VBoxContainer/Middle/TowerOption.set_texture_normal(image)
-	$Panel/VBoxContainer/Bottom/TowerName.text = config.menu[current_tower_id]['name']
-	$Panel/VBoxContainer/Nether/TowerPrice.text = str(config.menu[current_tower_id]['price'])
+	$Panel/MarginContainer/VBoxContainer/Middle/TowerOption.set_texture_normal(image)
+	$Panel/MarginContainer/VBoxContainer/Bottom/TowerName.text = config.menu[current_tower_id]['name']
+	$Panel/MarginContainer/VBoxContainer/Nether/TowerPrice.text = str(config.menu[current_tower_id]['price'])
 	
 	var image_2 = config.menu[current_tower_id_2]['image']
 	if current_disabled_2:
 		image_2 = config.menu[current_tower_id_2]['image_disabled']
 	
-	$Panel/VBoxContainer/Middle/TowerOption2.set_texture_normal(image_2)
-	$Panel/VBoxContainer/Bottom/TowerName2.text = config.menu[current_tower_id_2]['name']
-	$Panel/VBoxContainer/Nether/TowerPrice2.text = str(config.menu[current_tower_id_2]['price'])
+	$Panel/MarginContainer/VBoxContainer/Middle/TowerOption2.set_texture_normal(image_2)
+	$Panel/MarginContainer/VBoxContainer/Bottom/TowerName2.text = config.menu[current_tower_id_2]['name']
+	$Panel/MarginContainer/VBoxContainer/Nether/TowerPrice2.text = str(config.menu[current_tower_id_2]['price'])
 		
 	show()

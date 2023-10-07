@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy88k4uxt1v37"]
+
+[ext_resource type="Texture2D" uid="uid://d2d7ab8q2vik4" path="res://assets/icons/label_bg.png" id="1_1gxsd"]
+[ext_resource type="Texture2D" uid="uid://derifasksdfub" path="res://assets/icons/pause.png" id="2_imq5h"]
+[ext_resource type="Texture2D" uid="uid://e8dmiy1xr5g3" path="res://assets/icons/health.png" id="3_r1i66"]
+
+[node name="GameStats" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = -2.0
+offset_bottom = 51.0
+grow_horizontal = 2
+
+[node name="Resources" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 981.0
+offset_top = 7.0
+offset_right = 1125.0
+offset_bottom = 42.0
+texture = ExtResource("1_1gxsd")
+
+[node name="Label" type="Label" parent="Resources"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "999999999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PauseButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -22.5
+offset_right = 2028.0
+offset_bottom = 2025.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.02, 0.02)
+texture_normal = ExtResource("2_imq5h")
+
+[node name="Health" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -14.5
+offset_right = 238.0
+offset_bottom = 20.5
+grow_vertical = 2
+texture = ExtResource("1_1gxsd")
+
+[node name="GridContainer" type="GridContainer" parent="Health"]
+layout_mode = 0
+offset_right = 3608.0
+offset_bottom = 1200.0
+scale = Vector2(0.03, 0.03)
+columns = 6
+
+[node name="Health" type="TextureRect" parent="Health/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_r1i66")
+
+[node name="Health2" type="TextureRect" parent="Health/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_r1i66")
+
+[node name="Health3" type="TextureRect" parent="Health/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_r1i66")
+
+[node name="Health4" type="TextureRect" parent="Health/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_r1i66")
+
+[node name="Health5" type="TextureRect" parent="Health/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_r1i66")
+
+[node name="Health6" type="TextureRect" parent="Health/GridContainer"]
+layout_mode = 2
+texture = ExtResource("3_r1i66")
