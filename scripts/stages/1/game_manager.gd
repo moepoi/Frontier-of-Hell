@@ -2,7 +2,8 @@ extends Node2D
 
 class_name GameManager
 
-var config = load("res://scripts/stages/1/config.gd").new()
+var config_path = "res://scripts/stages/1/config.gd"
+var config = load(config_path).new()
 
 var data = {
 	"tower": {},
@@ -53,6 +54,9 @@ func on_build_tower(pos, tower_id, tower_placement_id):
 		
 	var tower = config.tower[tower_id]['asset'].instantiate()
 	get_tree().current_scene.add_child(tower)
+	tower.set_config(config_path)
+	tower.set_tower(tower_id)
+	tower.set_timer()
 	tower.global_position = pos
 	
 	data['tower'][str(tower_placement_id)]['id'] = tower_id

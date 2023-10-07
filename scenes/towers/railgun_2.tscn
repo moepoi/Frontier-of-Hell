@@ -1,39 +1,39 @@
 [gd_scene load_steps=14 format=3 uid="uid://ctnlfsnc2gl03"]
 
-[ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_th1rt"]
-[ext_resource type="PackedScene" uid="uid://dqa80ptcc8p70" path="res://scenes/bullets/bullet_1.tscn" id="2_nr2g5"]
-[ext_resource type="Texture2D" uid="uid://b0dawx5rlcyo3" path="res://assets/spritesheets/towers/railgun-2.png" id="3_uumfa"]
+[ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_rnv08"]
+[ext_resource type="PackedScene" uid="uid://dqa80ptcc8p70" path="res://scenes/bullets/bullet_1.tscn" id="2_fshi3"]
+[ext_resource type="Texture2D" uid="uid://b0dawx5rlcyo3" path="res://assets/spritesheets/towers/railgun-2.png" id="3_aeasn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fss1a"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6n843"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xjwev"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g520l"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_os6e1"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_whr0e"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m7sk4"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jok4"]
-atlas = ExtResource("3_uumfa")
+atlas = ExtResource("3_aeasn")
 region = Rect2(896, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xw8jx"]
@@ -72,8 +72,8 @@ animations = [{
 radius = 138.293
 
 [node name="railgun-2" type="Node2D" groups=["Towers"]]
-script = ExtResource("1_th1rt")
-bullet = ExtResource("2_nr2g5")
+script = ExtResource("1_rnv08")
+bullet = ExtResource("2_fshi3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 0)
@@ -89,6 +89,16 @@ shape = SubResource("CircleShape2D_wmsbt")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+modulate = Color(0.431373, 0.815686, 0, 1)
+offset_left = 4.0
+offset_top = -15.0
+offset_right = 106.0
+offset_bottom = 12.0
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+show_percentage = false
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]

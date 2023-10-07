@@ -66,50 +66,56 @@ var tower = [
 	{
 		"name": "Cannon",
 		"asset": preload("res://scenes/towers/cannon_1.tscn"),
-		"timer": 0.2,
+		"timer": 1,
 		"speed": 200,
 		"damage": 30,
-		"health": 100
+		"health": 100,
+		"durability_reduction": 10
 	},
 	{
 		"name": "Railgun",
 		"asset": preload("res://scenes/towers/railgun_1.tscn"),
-		"timer": 0.2,
+		"timer": 1,
 		"speed": 200,
 		"damage": 40,
-		"health": 100
+		"health": 100,
+		"durability_reduction": 10
 	},
 	{
 		"name": "Cannon (V2)",
 		"asset": preload("res://scenes/towers/cannon_2.tscn"),
-		"timer": 0.2,
+		"timer": 1,
 		"speed": 200,
 		"damage": 40,
-		"health": 100
+		"health": 100,
+		"durability_reduction": 10
 	},
 	{
 		"name": "Railgun (V2)",
 		"asset": preload("res://scenes/towers/railgun_2.tscn"),
-		"timer": 0.2,
+		"timer": 1,
 		"speed": 200,
 		"damage": 40,
-		"health": 100
+		"health": 100,
+		"durability_reduction": 10
 	},
 	{
 		"name": "Cannon (V3)",
 		"asset": preload("res://scenes/towers/cannon_3.tscn"),
-		"timer": 0.2,
+		"timer": 1,
 		"speed": 200,
 		"damage": 40,
-		"health": 100
+		"health": 100,
+		"durability_reduction": 10
 	},
 	{
 		"name": "Railgun (V3)",
 		"asset": preload("res://scenes/towers/railgun_3.tscn"),
-		"timer": 0.2,
+		"timer": 1,
 		"speed": 200,
 		"damage": 40,
-		"health": 100
+		"health": 100,
+		"durability_reduction": 10
 	}
 ]
 

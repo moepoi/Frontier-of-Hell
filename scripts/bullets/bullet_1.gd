@@ -1,8 +1,8 @@
 extends Area2D
 
 const right = Vector2.RIGHT
-@export var speed : int = 200
-@export var damage : int = 20
+var speed : int = 0
+var damage : int = 0
 	
 func _physics_process(delta):
 	var movement = right.rotated(rotation) * speed * delta
