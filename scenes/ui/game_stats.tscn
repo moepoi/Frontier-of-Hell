@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy88k4uxt1v37"]
+[gd_scene load_steps=5 format=3 uid="uid://cy88k4uxt1v37"]
 
 [ext_resource type="Texture2D" uid="uid://d2d7ab8q2vik4" path="res://assets/icons/label_bg.png" id="1_1gxsd"]
+[ext_resource type="Script" path="res://scripts/ui/game_stats.gd" id="1_ui7x4"]
 [ext_resource type="Texture2D" uid="uid://derifasksdfub" path="res://assets/icons/pause.png" id="2_imq5h"]
 [ext_resource type="Texture2D" uid="uid://e8dmiy1xr5g3" path="res://assets/icons/health.png" id="3_r1i66"]
 
@@ -11,13 +12,14 @@ anchor_right = 1.0
 offset_right = -2.0
 offset_bottom = 51.0
 grow_horizontal = 2
+script = ExtResource("1_ui7x4")
 
 [node name="Resources" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_left = 981.0
+offset_left = 975.0
 offset_top = 7.0
 offset_right = 1125.0
-offset_bottom = 42.0
+offset_bottom = 48.0
 texture = ExtResource("1_1gxsd")
 
 [node name="Label" type="Label" parent="Resources"]
@@ -31,20 +33,32 @@ text = "999999999"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PauseButton" type="TextureButton" parent="."]
+[node name="Pause" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -18.0
+offset_top = 10.0
+offset_right = 19.0
+offset_bottom = 45.0
+grow_horizontal = 2
+texture = ExtResource("1_1gxsd")
+
+[node name="PauseButton" type="TextureButton" parent="Pause"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -22.5
-offset_right = 2028.0
-offset_bottom = 2025.5
+offset_left = -15.5
+offset_top = -15.5
+offset_right = 2032.5
+offset_bottom = 2032.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.02, 0.02)
+scale = Vector2(0.015, 0.015)
 texture_normal = ExtResource("2_imq5h")
 
 [node name="Health" type="NinePatchRect" parent="."]

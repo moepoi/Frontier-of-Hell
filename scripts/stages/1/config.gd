@@ -3,6 +3,8 @@ extends Node
 class_name Config
 
 var game = {
+	"health": 6,
+	"resource": 100,
 	"spawn_timer": 3.0,
 	"offset": [-30.0, 30.0],
 	"path_direction": [

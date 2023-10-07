@@ -6,11 +6,12 @@ var config = load("res://scripts/stages/1/config.gd").new()
 
 var data = {
 	"tower": {},
-	"health": 6,
-	"resource": 100
+	"health": config.game['health'],
+	"resource": config.game['resource']
 }
 
 func _ready():
+	$CanvasLayer/GameStats.set_resource(data['resource'])
 	var placements = $Placements.get_children()
 	for placement in placements:
 		placement.connect("on_placement", on_game_placement)
@@ -57,3 +58,4 @@ func on_build_tower(pos, tower_id, tower_placement_id):
 	data['tower'][str(tower_placement_id)]['id'] = tower_id
 	data['tower'][str(tower_placement_id)]['name'] = tower.name
 	data['resource'] -= config.menu[tower_id]['price']
+	$CanvasLayer/GameStats.set_resource(data['resource'])
