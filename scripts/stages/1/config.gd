@@ -68,42 +68,48 @@ var tower = [
 		"asset": preload("res://scenes/towers/cannon_1.tscn"),
 		"timer": 0.2,
 		"speed": 200,
-		"damage": 30
+		"damage": 30,
+		"health": 100
 	},
 	{
 		"name": "Railgun",
 		"asset": preload("res://scenes/towers/railgun_1.tscn"),
 		"timer": 0.2,
 		"speed": 200,
-		"damage": 40
+		"damage": 40,
+		"health": 100
 	},
 	{
 		"name": "Cannon (V2)",
 		"asset": preload("res://scenes/towers/cannon_2.tscn"),
 		"timer": 0.2,
 		"speed": 200,
-		"damage": 40
+		"damage": 40,
+		"health": 100
 	},
 	{
 		"name": "Railgun (V2)",
 		"asset": preload("res://scenes/towers/railgun_2.tscn"),
 		"timer": 0.2,
 		"speed": 200,
-		"damage": 40
+		"damage": 40,
+		"health": 100
 	},
 	{
 		"name": "Cannon (V3)",
 		"asset": preload("res://scenes/towers/cannon_3.tscn"),
 		"timer": 0.2,
 		"speed": 200,
-		"damage": 40
+		"damage": 40,
+		"health": 100
 	},
 	{
 		"name": "Railgun (V3)",
 		"asset": preload("res://scenes/towers/railgun_3.tscn"),
 		"timer": 0.2,
 		"speed": 200,
-		"damage": 40
+		"damage": 40,
+		"health": 100
 	}
 ]
 
@@ -112,36 +118,42 @@ var enemy = [
 		"name": "Demon",
 		"health": 100,
 		"speed": 30,
-		"damage": 1
+		"damage": 1,
+		"reward": 10
 	},
 	{
 		"name": "Orc",
 		"health": 100,
 		"speed": 30,
-		"damage": 1
+		"damage": 1,
+		"reward": 20
 	},
 	{
 		"name": "Cyclops",
 		"health": 100,
 		"speed": 30,
-		"damage": 1
+		"damage": 1,
+		"reward": 30
 	},
 	{
 		"name": "Demon Boar",
 		"health": 100,
 		"speed": 30,
-		"damage": 1
+		"damage": 1,
+		"reward": 40
 	},
 	{
 		"name": "Demon Fungus",
 		"health": 100,
 		"speed": 30,
-		"damage": 1
+		"damage": 1,
+		"reward": 50
 	},
 	{
 		"name": "Demon Shark",
 		"health": 100,
 		"speed": 30,
-		"damage": 1
+		"damage": 1,
+		"reward": 60
 	}
 ]

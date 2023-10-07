@@ -66,3 +66,7 @@ func on_enemy_entered_base(enemy):
 	
 	if data['health'] < 1:
 		print("Game Over")
+		
+func on_enemy_reward(value: int):
+	data['resource'] += value
+	$CanvasLayer/GameStats.set_resource(data['resource'])

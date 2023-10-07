@@ -5,6 +5,7 @@ var enemy_id: int = 0
 var health: int = 0
 var damage: int = 0
 var speed: int = 0
+var reward: int = 0
 var direction_progress = []
 var direction = []
 
@@ -16,6 +17,7 @@ func set_enemy(id: int):
 	health = config.enemy[enemy_id]['health']
 	damage = config.enemy[enemy_id]['damage']
 	speed = config.enemy[enemy_id]['speed']
+	reward = config.enemy[enemy_id]['reward']
 	
 func set_direction():
 	var path_direction = config.game['path_direction']
@@ -26,7 +28,8 @@ func set_direction():
 func _process(delta):
 	update_healthbar()
 	change_direction(get_progress())
-	if health <= 0:
+	if health < 1:
+		get_tree().current_scene.on_enemy_reward(reward)
 		queue_free()
 	set_progress(get_progress() + speed * delta)
 	
