@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=13 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
 [ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="2_1njjc"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="5_3w5lp"]
 [ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="6_hbxxi"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="6_mao4r"]
+[ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="8_rsf1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yb1o"]
 texture = ExtResource("2_1njjc")
@@ -563,5 +564,8 @@ position = Vector2(676, 192)
 
 [node name="placement3" parent="Placements" instance=ExtResource("6_mao4r")]
 position = Vector2(844, 393)
+
+[node name="base" parent="." instance=ExtResource("8_rsf1n")]
+position = Vector2(1179, 502)
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]

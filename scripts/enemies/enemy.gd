@@ -3,6 +3,7 @@ extends PathFollow2D
 var config = null
 var enemy_id: int = 0
 var health: int = 0
+var damage: int = 0
 var speed: int = 0
 var direction_progress = []
 var direction = []
@@ -13,6 +14,7 @@ func set_config(config_path):
 func set_enemy(id: int):
 	enemy_id = id
 	health = config.enemy[enemy_id]['health']
+	damage = config.enemy[enemy_id]['damage']
 	speed = config.enemy[enemy_id]['speed']
 	
 func set_direction():
@@ -45,3 +47,6 @@ func update_healthbar():
 
 func hit(damage : int):
 	health = health - damage
+
+func destroy():
+	queue_free()

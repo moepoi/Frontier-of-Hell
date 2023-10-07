@@ -80,26 +80,26 @@ offset_bottom = 1200.0
 scale = Vector2(0.03, 0.03)
 columns = 6
 
-[node name="Health" type="TextureRect" parent="Health/GridContainer"]
+[node name="1" type="TextureRect" parent="Health/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_r1i66")
 
-[node name="Health2" type="TextureRect" parent="Health/GridContainer"]
+[node name="2" type="TextureRect" parent="Health/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_r1i66")
 
-[node name="Health3" type="TextureRect" parent="Health/GridContainer"]
+[node name="3" type="TextureRect" parent="Health/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_r1i66")
 
-[node name="Health4" type="TextureRect" parent="Health/GridContainer"]
+[node name="4" type="TextureRect" parent="Health/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_r1i66")
 
-[node name="Health5" type="TextureRect" parent="Health/GridContainer"]
+[node name="5" type="TextureRect" parent="Health/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_r1i66")
 
-[node name="Health6" type="TextureRect" parent="Health/GridContainer"]
+[node name="6" type="TextureRect" parent="Health/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_r1i66")

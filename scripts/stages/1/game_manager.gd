@@ -12,6 +12,7 @@ var data = {
 
 func _ready():
 	$CanvasLayer/GameStats.set_resource(data['resource'])
+	$base.connect("enemy_entered_base", on_enemy_entered_base)
 	var placements = $Placements.get_children()
 	for placement in placements:
 		placement.connect("on_placement", on_game_placement)
@@ -42,7 +43,6 @@ func on_game_placement(pos, tower_placement_id):
 		if data['resource'] < config.menu[1]['price']:
 			disabled_2 = true
 	$CanvasLayer/TowerMenu.show_menu(tower_id, pos, tower_placement_id, disabled, disabled_2)
-	print(data)
 
 func on_build_tower(pos, tower_id, tower_placement_id):
 	if data['tower'].has(str(tower_placement_id)):
@@ -59,3 +59,10 @@ func on_build_tower(pos, tower_id, tower_placement_id):
 	data['tower'][str(tower_placement_id)]['name'] = tower.name
 	data['resource'] -= config.menu[tower_id]['price']
 	$CanvasLayer/GameStats.set_resource(data['resource'])
+
+func on_enemy_entered_base(enemy):
+	data['health'] -= enemy.damage
+	$CanvasLayer/GameStats.set_damage(enemy.damage)
+	
+	if data['health'] < 1:
+		print("Game Over")

@@ -1,14 +1,13 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func set_resource(value):
 	$Resources/Label.text = str(value)
+
+func set_damage(value):
+	var health = $Health/GridContainer.get_children()
+	
+	for x in range(value):
+		if !health.is_empty():
+			health[len(health) - 1].queue_free()
+			health.pop_back()
