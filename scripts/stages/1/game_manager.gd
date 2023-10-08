@@ -6,18 +6,31 @@ var config_path = "res://scripts/stages/1/config.gd"
 var config = load(config_path).new()
 
 var data = {
+	"paused": false,
 	"tower": {},
 	"health": config.game['health'],
 	"resource": config.game['resource']
 }
 
 func _ready():
+	$CanvasLayer/GameStats.connect("on_paused", on_game_paused)
+	$CanvasLayer/PauseMenu.connect("on_resume", on_game_resume)
 	$CanvasLayer/GameStats.set_resource(data['resource'])
 	$base.connect("enemy_entered_base", on_enemy_entered_base)
 	var placements = $Placements.get_children()
 	for placement in placements:
 		placement.connect("on_placement", on_game_placement)
 	$CanvasLayer/TowerMenu.connect("build_tower", on_build_tower)
+
+func on_game_paused():
+	data['paused'] = !data['paused']
+	get_tree().paused = data['paused']
+	$CanvasLayer/PauseMenu.show_menu()
+
+func on_game_resume():
+	data['paused'] = !data['paused']
+	get_tree().paused = data['paused']
+	$CanvasLayer/PauseMenu.hide_menu()
 	
 func on_game_placement(pos, tower_placement_id):
 	var tower_id = null

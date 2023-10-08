@@ -103,3 +103,5 @@ texture = ExtResource("3_r1i66")
 [node name="6" type="TextureRect" parent="Health/GridContainer"]
 layout_mode = 2
 texture = ExtResource("3_r1i66")
+
+[connection signal="pressed" from="Pause/PauseButton" to="." method="_on_pause_button_pressed"]

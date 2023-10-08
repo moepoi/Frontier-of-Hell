@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=14 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
 [ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="2_1njjc"]
 [ext_resource type="Texture2D" uid="uid://danbfdqmqu23q" path="res://assets/tileset/ashlands/tf_B_ashlands_3.png" id="3_l5wod"]
 [ext_resource type="Script" path="res://scripts/stages/1/summon.gd" id="4_gt08o"]
+[ext_resource type="PackedScene" uid="uid://bhnv1dsggssil" path="res://scenes/ui/pause_menu.tscn" id="5_0gif7"]
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="5_3w5lp"]
 [ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="6_hbxxi"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="6_mao4r"]
@@ -525,6 +526,7 @@ _data = {
 point_count = 4
 
 [node name="GameManager" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_aosti")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -548,6 +550,9 @@ script = ExtResource("4_gt08o")
 one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_0gif7")]
+visible = false
 
 [node name="TowerMenu" parent="CanvasLayer" instance=ExtResource("5_3w5lp")]
 visible = false
