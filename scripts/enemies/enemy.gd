@@ -48,8 +48,8 @@ func update_healthbar():
 	else:
 		$EnemyBody/HealthBar.visible = true
 
-func hit(damage : int):
-	health = health - damage
+func hit(value : int):
+	health = health - value
 
 func destroy():
 	queue_free()
