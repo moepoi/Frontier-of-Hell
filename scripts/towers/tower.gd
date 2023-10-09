@@ -1,5 +1,7 @@
 extends Node2D
 
+signal on_destroy(tower_placement_id)
+
 @onready var rayCast = $RayCast2D
 @onready var timer = $Timer
 
@@ -7,6 +9,7 @@ var bullet: PackedScene = null
 
 var config = null
 var tower_id: int = 0
+var tower_placement_id = null
 var health: int = 0
 var damage: int = 0
 var speed: int = 0
@@ -20,8 +23,9 @@ var enemies = []
 func set_config(config_path):
 	config = load(config_path).new()
 	
-func set_tower(id: int):
+func set_tower(id: int, placement_id):
 	tower_id = id
+	tower_placement_id = placement_id
 	bullet = config.tower[tower_id]['bullet']
 	health = config.tower[tower_id]['health']
 	damage = config.tower[tower_id]['damage']
@@ -38,6 +42,7 @@ func _update_look_at(enemy: Vector2):
 func _physics_process(_delta):
 	update_healthbar()
 	if health < 1:
+		on_destroy.emit(tower_placement_id)
 		queue_free()
 		
 	if enemies.is_empty():

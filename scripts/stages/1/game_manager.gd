@@ -19,7 +19,7 @@ func _ready():
 	$base.connect("enemy_entered_base", on_enemy_entered_base)
 	var placements = $Placements.get_children()
 	for placement in placements:
-		placement.connect("on_placement", on_game_placement)
+		placement.connect("on_placement", on_tower_placement)
 	$CanvasLayer/TowerMenu.connect("build_tower", on_build_tower)
 
 func on_game_paused():
@@ -32,7 +32,7 @@ func on_game_resume():
 	get_tree().paused = data['paused']
 	$CanvasLayer/PauseMenu.hide_menu()
 	
-func on_game_placement(pos, tower_placement_id):
+func on_tower_placement(pos, tower_placement_id):
 	var tower_id = null
 	var disabled = false
 	var disabled_2 = false
@@ -68,14 +68,18 @@ func on_build_tower(pos, tower_id, tower_placement_id):
 	var tower = config.tower[tower_id]['asset'].instantiate()
 	get_tree().current_scene.add_child(tower)
 	tower.set_config(config_path)
-	tower.set_tower(tower_id)
+	tower.set_tower(tower_id, tower_placement_id)
 	tower.set_timer()
 	tower.global_position = pos
+	tower.connect("on_destroy", on_tower_destroy)
 	
 	data['tower'][str(tower_placement_id)]['id'] = tower_id
 	data['tower'][str(tower_placement_id)]['name'] = tower.name
 	data['resource'] -= config.menu[tower_id]['price']
 	$CanvasLayer/GameStats.set_resource(data['resource'])
+
+func on_tower_destroy(tower_placement_id):
+	data['tower'].erase(str(tower_placement_id))
 
 func on_enemy_entered_base(enemy):
 	data['health'] -= enemy.damage
