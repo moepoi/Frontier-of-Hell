@@ -1,8 +1,6 @@
 extends Node2D
 
-class_name GameManager
-
-var config_path = "res://scripts/stages/1/config.gd"
+var config_path = "res://scripts/stages/2/config.gd"
 var config = load(config_path).new()
 
 var data = {

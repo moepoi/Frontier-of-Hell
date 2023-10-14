@@ -11,16 +11,20 @@ config_version=5
 [application]
 
 config/name="Frontier of Hell"
-run/main_scene="res://scenes/stages/stage_1.tscn"
+run/main_scene="res://scenes/stages/stage_2.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/image="res://assets/icons/logo.png"
-config/icon="res://icon.svg"
+config/icon="res://assets/icons/logo.png"
 boot_splash/minimum_display_time=3
 
 [display]
 
 window/stretch/mode="viewport"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [layer_names]
 

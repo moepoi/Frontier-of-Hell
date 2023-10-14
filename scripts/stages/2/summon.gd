@@ -3,7 +3,7 @@ extends Path2D
 @onready var timer = $Timer
 @export var type: int = 0
 
-var config_path = "res://scripts/stages/1/config.gd"
+var config_path = "res://scripts/stages/2/config.gd"
 var config = load(config_path).new()
 
 var spawn_first: bool = true

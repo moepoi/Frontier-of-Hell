@@ -1,25 +1,54 @@
 extends Node
 
-class_name Config
 
 var game = {
 	"health": 6,
 	"resource": 100,
 	"spawn_timer": 3.0,
-	"offset": [-30.0, 30.0],
+	"offset": [-40.0, 35.0],
 	"path_direction": [
 		[
 			{
 				"progress": 0,
-				"direction": "right",
+				"direction": "front",
 			},
 			{
-				"progress": 570,
+				"progress": 200,
+				"direction": "left"
+			},
+			{
+				"progress": 460,
 				"direction": "front"
 			},
 			{
-				"progress": 855,
+				"progress": 780,
 				"direction": "right"
+			},
+			{
+				"progress": 1043,
+				"direction": "front"
+			}
+		],
+		[
+			{
+				"progress": 0,
+				"direction": "front",
+			},
+			{
+				"progress": 190,
+				"direction": "right"
+			},
+			{
+				"progress": 450,
+				"direction": "front"
+			},
+			{
+				"progress": 770,
+				"direction": "left"
+			},
+			{
+				"progress": 1033,
+				"direction": "front"
 			}
 		]
 	]

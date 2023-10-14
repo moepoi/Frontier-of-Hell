@@ -19,8 +19,8 @@ func set_enemy(id: int):
 	speed = config.enemy[enemy_id]['speed']
 	reward = config.enemy[enemy_id]['reward']
 	
-func set_direction():
-	var path_direction = config.game['path_direction']
+func set_direction(type: int):
+	var path_direction = config.game['path_direction'][type]
 	for x in path_direction:
 		direction_progress.append(x['progress'])
 		direction.append(x['direction'])
