@@ -5,20 +5,32 @@ var game = {
 	"health": 6,
 	"resource": 100,
 	"spawn_timer": 3.0,
-	"offset": [-30.0, 30.0],
+	"offset": [-40.0, 50.0],
 	"path_direction": [
 		[
 			{
 				"progress": 0,
-				"direction": "right",
+				"direction": "front",
 			},
 			{
-				"progress": 570,
+				"progress": 213,
+				"direction": "left"
+			},
+			{
+				"progress": 712,
 				"direction": "front"
 			},
 			{
-				"progress": 855,
+				"progress": 896,
 				"direction": "right"
+			},
+			{
+				"progress": 1593,
+				"direction": "front"
+			},
+            {
+				"progress": 1787,
+				"direction": "left"
 			}
 		]
 	]

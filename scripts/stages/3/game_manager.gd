@@ -1,7 +1,6 @@
 extends Node2D
 
-
-var config_path = "res://scripts/stages/1/config.gd"
+var config_path = "res://scripts/stages/3/config.gd"
 var config = load(config_path).new()
 
 var data = {
