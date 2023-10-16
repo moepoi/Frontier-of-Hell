@@ -1,12 +1,14 @@
 extends Area2D
 
+
 const right = Vector2.RIGHT
 var speed : int = 0
 var damage : int = 0
-	
+var dir = 0
+
 func _physics_process(delta):
-	var movement = right.rotated(rotation) * speed * delta
-	global_position += movement
+	var move_dir = Vector2(1,0).rotated(dir)
+	global_position += (move_dir * speed)
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

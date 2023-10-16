@@ -87,7 +87,7 @@ var tower = [
 		"asset": preload("res://scenes/towers/cannon_1.tscn"),
 		"bullet": preload("res://scenes/bullets/bullet_1.tscn"),
 		"timer": 1,
-		"speed": 200,
+		"speed": 3,
 		"damage": 30,
 		"health": 100,
 		"durability_reduction": 10
@@ -97,7 +97,7 @@ var tower = [
 		"asset": preload("res://scenes/towers/railgun_1.tscn"),
 		"bullet": preload("res://scenes/bullets/bullet_1.tscn"),
 		"timer": 1,
-		"speed": 200,
+		"speed": 3,
 		"damage": 40,
 		"health": 100,
 		"durability_reduction": 10
@@ -107,7 +107,7 @@ var tower = [
 		"asset": preload("res://scenes/towers/cannon_2.tscn"),
 		"bullet": preload("res://scenes/bullets/bullet_1.tscn"),
 		"timer": 1,
-		"speed": 200,
+		"speed": 3,
 		"damage": 40,
 		"health": 100,
 		"durability_reduction": 10
@@ -117,7 +117,7 @@ var tower = [
 		"asset": preload("res://scenes/towers/railgun_2.tscn"),
 		"bullet": preload("res://scenes/bullets/bullet_1.tscn"),
 		"timer": 1,
-		"speed": 200,
+		"speed": 3,
 		"damage": 40,
 		"health": 100,
 		"durability_reduction": 10
@@ -127,7 +127,7 @@ var tower = [
 		"asset": preload("res://scenes/towers/cannon_3.tscn"),
 		"bullet": preload("res://scenes/bullets/bullet_1.tscn"),
 		"timer": 1,
-		"speed": 200,
+		"speed": 3,
 		"damage": 40,
 		"health": 100,
 		"durability_reduction": 10
@@ -137,7 +137,7 @@ var tower = [
 		"asset": preload("res://scenes/towers/railgun_3.tscn"),
 		"bullet": preload("res://scenes/bullets/bullet_1.tscn"),
 		"timer": 1,
-		"speed": 200,
+		"speed": 3,
 		"damage": 40,
 		"health": 100,
 		"durability_reduction": 10

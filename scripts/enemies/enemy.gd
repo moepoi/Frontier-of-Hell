@@ -9,6 +9,9 @@ var reward: int = 0
 var direction_progress = []
 var direction = []
 
+var enemy_vol = Vector2(1,1)
+var old_enemy_pos
+
 func set_config(config_path):
 	config = load(config_path).new()
 
@@ -25,6 +28,9 @@ func set_direction(type: int):
 		direction_progress.append(x['progress'])
 		direction.append(x['direction'])
 
+func _ready():
+	old_enemy_pos = global_position
+
 func _process(delta):
 	update_healthbar()
 	change_direction(get_progress())
@@ -32,6 +38,8 @@ func _process(delta):
 		get_tree().current_scene.on_enemy_reward(reward)
 		queue_free()
 	set_progress(get_progress() + speed * delta)
+	enemy_vol = global_position - old_enemy_pos
+	old_enemy_pos = global_position
 	
 func change_direction(current_progress):
 	if !direction_progress.is_empty():

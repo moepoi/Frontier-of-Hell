@@ -48,7 +48,8 @@ func _physics_process(_delta):
 	if enemies.is_empty():
 		$AnimatedSprite2D.stop()
 	else:
-		_update_look_at(enemies[0].global_position)
+		var distance = global_position.distance_to(enemies[0].global_position)
+		_update_look_at(enemies[0].global_position + enemies[0].enemy_vol * (distance / speed))
 		if timer.is_stopped():
 			$AnimatedSprite2D.play("default")
 			_shoot()
@@ -56,11 +57,12 @@ func _physics_process(_delta):
 func _shoot():
 	if bullet:
 		var bullet_instance: Node2D = bullet.instantiate()
-		get_tree().current_scene.add_child(bullet_instance)
+		bullet_instance.dir = rotation
+		bullet_instance.rotation = rotation
+		bullet_instance.global_position = global_position
 		bullet_instance.speed = speed
 		bullet_instance.damage = damage
-		bullet_instance.global_position = global_position
-		bullet_instance.global_rotation = rayCast.global_rotation + 0.1
+		get_tree().current_scene.add_child(bullet_instance)
 		health -= durability_reduction
 	timer.start()
 	
