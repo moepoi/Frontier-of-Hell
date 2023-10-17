@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cmafth1g3e7fq"]
+
+[node name="About" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 0
+text = "About"
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+text = "Back"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales velit suscipit nibh sollicitudin, aliquam hendrerit sapien efficitur. Vestibulum neque justo, fermentum at consectetur nec, euismod volutpat urna. Vestibulum rutrum justo eu efficitur interdum. Phasellus a facilisis nulla. Morbi ullamcorper ut dui vel aliquet. Aenean fringilla, nisl feugiat maximus tristique, velit neque auctor ipsum, ac tincidunt massa sem sit amet risus. Nunc odio libero, vulputate in dictum quis, mollis rutrum lectus. Vestibulum in congue metus. Duis ac erat nulla. Sed lacinia feugiat purus, vel blandit justo condimentum non. Vivamus tincidunt gravida magna, eget finibus risus varius et. Nulla facilisi.
+
+Phasellus sit amet sapien molestie, condimentum dolor sed, laoreet nulla. Sed arcu mi, dignissim faucibus quam id, molestie hendrerit dui. Nam consequat erat id nunc bibendum dignissim. Suspendisse porta iaculis enim, ut auctor nisi ultrices vitae. Integer gravida dignissim risus. Donec scelerisque ac lectus ut rhoncus. Duis malesuada aliquam lorem, vitae congue erat sodales non. Suspendisse congue convallis velit. Ut vestibulum vel nunc eu congue. In hac habitasse platea dictumst."
+horizontal_alignment = 3
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3

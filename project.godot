@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Frontier of Hell"
-run/main_scene="res://scenes/ui/select_stage.tscn"
+run/main_scene="res://scenes/ui/about.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/image="res://assets/icons/logo.png"
