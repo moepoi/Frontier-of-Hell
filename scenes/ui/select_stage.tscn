@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cwf2fhvjfq7xg"]
+[gd_scene load_steps=2 format=3 uid="uid://cwf2fhvjfq7xg"]
+
+[ext_resource type="Script" path="res://scripts/ui/select_stage.gd" id="1_t86bq"]
 
 [node name="SelectStage" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t86bq")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -41,7 +44,7 @@ size_flags_horizontal = 2
 size_flags_vertical = 0
 text = "Select Stage"
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Back" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 0
@@ -59,7 +62,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+[node name="Stage 1" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
 layout_mode = 2
 text = "1"
 
@@ -71,7 +74,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer2"]
+[node name="Stage 2" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer2"]
 layout_mode = 2
 text = "2"
 
@@ -83,7 +86,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 10
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3"]
+[node name="Stage 3" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3"]
 layout_mode = 2
 text = "3"
 
@@ -99,7 +102,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
+[node name="Stage 4" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
 layout_mode = 2
 text = "4"
 
@@ -111,7 +114,7 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer2"]
+[node name="Stage 5" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer2"]
 layout_mode = 2
 text = "5"
 
@@ -123,6 +126,14 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer3"]
+[node name="Stage 6" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer3"]
 layout_mode = 2
 text = "6"
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer/Stage 1" to="." method="_on_stage_1_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer2/Stage 2" to="." method="_on_stage_2_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3/Stage 3" to="." method="_on_stage_3_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer/Stage 4" to="." method="_on_stage_4_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer2/Stage 5" to="." method="_on_stage_5_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer3/Stage 6" to="." method="_on_stage_6_pressed"]

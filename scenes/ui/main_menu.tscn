@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8pdp1x331u5c"]
+[gd_scene load_steps=4 format=3 uid="uid://b8pdp1x331u5c"]
 
 [ext_resource type="Texture2D" uid="uid://c1qbpse383sys" path="res://assets/backgrounds/main-bg.png" id="1_28cjd"]
+[ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_6741p"]
 [ext_resource type="Texture2D" uid="uid://dm8ug0o5361wn" path="res://assets/icons/logo-main.png" id="2_l26fo"]
 
 [node name="MainMenu" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6741p")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -79,3 +81,8 @@ text = "About"
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Exit"
+
+[connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]
+[connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]
