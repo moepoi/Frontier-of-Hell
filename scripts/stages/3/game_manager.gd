@@ -46,6 +46,10 @@ func on_tower_placement(pos, tower_placement_id):
 				tower_id = 4
 			3:
 				tower_id = 5
+			4:
+				tower_id = 4
+			5:
+				tower_id = 5
 			_:
 				tower_id = null
 		
