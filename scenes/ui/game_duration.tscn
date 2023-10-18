@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bigsx1yvw0pvg"]
+
+[ext_resource type="Script" path="res://scripts/ui/game_duration.gd" id="1_4xh30"]
+[ext_resource type="Texture2D" uid="uid://d2d7ab8q2vik4" path="res://assets/icons/label_bg.png" id="2_wqq5w"]
+
+[node name="GameDuration" type="Control"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_4xh30")
+
+[node name="Duration" type="NinePatchRect" parent="."]
+offset_left = 1054.0
+offset_top = -46.0
+offset_right = 1141.0
+offset_bottom = -12.0
+texture = ExtResource("2_wqq5w")
+
+[node name="Label" type="Label" parent="Duration"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1

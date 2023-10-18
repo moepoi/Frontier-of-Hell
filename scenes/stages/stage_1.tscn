@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=11 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
 [ext_resource type="TileSet" uid="uid://2u7m4ggcr08j" path="res://scenes/stages/stage_1.tres" id="2_3jjum"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="5_3w5lp"]
 [ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="6_hbxxi"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="6_mao4r"]
+[ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="7_8kqnd"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="8_rsf1n"]
 
 [sub_resource type="Curve2D" id="Curve2D_csucy"]
@@ -50,6 +51,8 @@ visible = false
 [node name="GameStats" parent="CanvasLayer" instance=ExtResource("6_hbxxi")]
 metadata/_edit_use_anchors_ = true
 
+[node name="GameDuration" parent="CanvasLayer" instance=ExtResource("7_8kqnd")]
+
 [node name="Placements" type="Node2D" parent="."]
 
 [node name="placement" parent="Placements" instance=ExtResource("6_mao4r")]
@@ -72,4 +75,8 @@ position = Vector2(1179, 543)
 [node name="base3" parent="Bases" instance=ExtResource("8_rsf1n")]
 position = Vector2(1178, 460)
 
+[node name="Duration" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
+[connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]

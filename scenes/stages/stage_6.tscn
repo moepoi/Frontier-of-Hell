@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dcecwku0if8tg"]
+[gd_scene load_steps=16 format=3 uid="uid://dcecwku0if8tg"]
 
 [ext_resource type="Script" path="res://scripts/stages/6/game_manager.gd" id="1_04mdc"]
 [ext_resource type="Texture2D" uid="uid://d36b03p0hs8kw" path="res://assets/tileset/ashlands/ashlands-32x32.png" id="1_a4nl1"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dud7to2ncqrqe" path="res://scenes/enemies/demon_shark.tscn" id="4_kv0eg"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="5_ypi0p"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="6_h3kdb"]
+[ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="8_tv86d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ebym7"]
 texture = ExtResource("1_a4nl1")
@@ -683,6 +684,8 @@ visible = false
 [node name="GameStats" parent="CanvasLayer" instance=ExtResource("4_k4wyn")]
 metadata/_edit_use_anchors_ = true
 
+[node name="GameDuration" parent="CanvasLayer" instance=ExtResource("8_tv86d")]
+
 [node name="Placements" type="Node2D" parent="."]
 
 [node name="placement" parent="Placements" instance=ExtResource("5_ypi0p")]
@@ -714,6 +717,10 @@ position = Vector2(106, 667)
 [node name="base4" parent="Bases" instance=ExtResource("6_h3kdb")]
 position = Vector2(149, 667)
 
+[node name="Duration" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D2/Timer" to="Path2D2" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D3/Timer" to="Path2D3" method="_on_timer_timeout"]
+[connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]

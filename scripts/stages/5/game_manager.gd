@@ -3,6 +3,8 @@ extends Node2D
 var config_path = "res://scripts/stages/5/config.gd"
 var config = load(config_path).new()
 
+@onready var duration = $Duration
+
 var data = {
 	"paused": false,
 	"tower": {},
@@ -11,6 +13,11 @@ var data = {
 }
 
 func _ready():
+	# Set Duration & Start Timer
+	duration.wait_time = config.game['duration']
+	duration.start()
+
+	# Connect to Signal
 	$CanvasLayer/GameStats.connect("on_paused", on_game_paused)
 	$CanvasLayer/PauseMenu.connect("on_resume", on_game_resume)
 	$CanvasLayer/GameStats.set_resource(data['resource'])
@@ -21,6 +28,9 @@ func _ready():
 	for placement in placements:
 		placement.connect("on_placement", on_tower_placement)
 	$CanvasLayer/TowerMenu.connect("build_tower", on_build_tower)
+
+func _process(_delta):
+	$CanvasLayer/GameDuration.update_duration($Duration.time_left)
 
 func on_game_paused():
 	data['paused'] = !data['paused']
@@ -95,3 +105,6 @@ func on_enemy_entered_base(enemy):
 func on_enemy_reward(value: int):
 	data['resource'] += value
 	$CanvasLayer/GameStats.set_resource(data['resource'])
+
+func _on_duration_timeout():
+	get_tree().change_scene_to_file("res://scenes/ui/victory.tscn")

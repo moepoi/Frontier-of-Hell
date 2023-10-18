@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://i18iy1wmek4s"]
+[gd_scene load_steps=14 format=3 uid="uid://i18iy1wmek4s"]
 
 [ext_resource type="Script" path="res://scripts/stages/5/game_manager.gd" id="1_kectu"]
 [ext_resource type="Texture2D" uid="uid://bq6hnxbt4w37u" path="res://assets/tileset/snowland/Snowland@64x64.png" id="1_s0uo6"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="4_qm2yl"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="5_vmpbi"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="6_yj08v"]
+[ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="7_khyn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pf042"]
 texture = ExtResource("1_s0uo6")
@@ -288,6 +289,8 @@ visible = false
 [node name="GameStats" parent="CanvasLayer" instance=ExtResource("4_qm2yl")]
 metadata/_edit_use_anchors_ = true
 
+[node name="GameDuration" parent="CanvasLayer" instance=ExtResource("7_khyn2")]
+
 [node name="Placements" type="Node2D" parent="."]
 
 [node name="placement" parent="Placements" instance=ExtResource("5_vmpbi")]
@@ -310,5 +313,9 @@ position = Vector2(902, 682)
 [node name="base2" parent="Bases" instance=ExtResource("6_yj08v")]
 position = Vector2(947, 681)
 
+[node name="Duration" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D2/Timer" to="Path2D2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]

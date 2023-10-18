@@ -2,6 +2,7 @@ extends Node
 
 
 var game = {
+	"duration": 300,
 	"health": 6,
 	"resource": 100,
 	"spawn_timer": 3.0,

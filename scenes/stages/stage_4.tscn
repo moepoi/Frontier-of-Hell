@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cxo5fh50r6uxs"]
+[gd_scene load_steps=14 format=3 uid="uid://cxo5fh50r6uxs"]
 
 [ext_resource type="Texture2D" uid="uid://bq6hnxbt4w37u" path="res://assets/tileset/snowland/Snowland@64x64.png" id="1_436vn"]
 [ext_resource type="Script" path="res://scripts/stages/4/game_manager.gd" id="1_lhtrq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bhnv1dsggssil" path="res://scenes/ui/pause_menu.tscn" id="4_ahd74"]
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="5_31eq4"]
 [ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="6_hgjt3"]
+[ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="7_5comn"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="7_v8e5o"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="8_trc1r"]
 
@@ -281,6 +282,8 @@ visible = false
 [node name="GameStats" parent="CanvasLayer" instance=ExtResource("6_hgjt3")]
 metadata/_edit_use_anchors_ = true
 
+[node name="GameDuration" parent="CanvasLayer" instance=ExtResource("7_5comn")]
+
 [node name="Placements" type="Node2D" parent="."]
 
 [node name="placement" parent="Placements" instance=ExtResource("7_v8e5o")]
@@ -309,5 +312,9 @@ position = Vector2(910, -44)
 [node name="base4" parent="Bases" instance=ExtResource("8_trc1r")]
 position = Vector2(951, -44)
 
+[node name="Duration" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D2/Timer" to="Path2D2" method="_on_timer_timeout"]
+[connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]
