@@ -6,7 +6,7 @@ var speed : int = 0
 var damage : int = 0
 var dir = 0
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var move_dir = Vector2(1,0).rotated(dir)
 	global_position += (move_dir * speed)
 
