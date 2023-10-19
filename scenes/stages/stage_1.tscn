@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=12 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
 [ext_resource type="TileSet" uid="uid://2u7m4ggcr08j" path="res://scenes/stages/stage_1.tres" id="2_3jjum"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="6_mao4r"]
 [ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="7_8kqnd"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="8_rsf1n"]
+[ext_resource type="PackedScene" uid="uid://r8kq68v8iflb" path="res://scenes/ui/victory.tscn" id="8_wl8vl"]
 
 [sub_resource type="Curve2D" id="Curve2D_csucy"]
 _data = {
@@ -52,6 +53,9 @@ visible = false
 metadata/_edit_use_anchors_ = true
 
 [node name="GameDuration" parent="CanvasLayer" instance=ExtResource("7_8kqnd")]
+
+[node name="Victory" parent="CanvasLayer" instance=ExtResource("8_wl8vl")]
+visible = false
 
 [node name="Placements" type="Node2D" parent="."]
 

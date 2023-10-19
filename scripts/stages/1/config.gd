@@ -22,7 +22,8 @@ var game = {
 				"direction": "right"
 			}
 		]
-	]
+	],
+	"next_stage": 2
 }
 
 var menu = [

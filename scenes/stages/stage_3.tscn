@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bxk5llqn5csgu"]
+[gd_scene load_steps=14 format=3 uid="uid://bxk5llqn5csgu"]
 
 [ext_resource type="Texture2D" uid="uid://bq6hnxbt4w37u" path="res://assets/tileset/snowland/Snowland@64x64.png" id="1_l1d1t"]
 [ext_resource type="Script" path="res://scripts/stages/3/game_manager.gd" id="1_u4jwa"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/stages/3/summon.gd" id="3_wyim2"]
 [ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="4_2c35u"]
 [ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="7_w8rhw"]
+[ext_resource type="PackedScene" uid="uid://r8kq68v8iflb" path="res://scenes/ui/victory.tscn" id="8_2707t"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="8_mm6r8"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="9_057um"]
 
@@ -276,6 +277,9 @@ visible = false
 metadata/_edit_use_anchors_ = true
 
 [node name="GameDuration" parent="CanvasLayer" instance=ExtResource("7_w8rhw")]
+
+[node name="Victory" parent="CanvasLayer" instance=ExtResource("8_2707t")]
+visible = false
 
 [node name="Placements" type="Node2D" parent="."]
 

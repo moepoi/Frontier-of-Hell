@@ -82,7 +82,8 @@ var game = {
 				"direction": "front"
 			}
 		]
-	]
+	],
+	"next_stage": 0
 }
 
 var menu = [

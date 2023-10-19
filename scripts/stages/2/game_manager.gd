@@ -29,6 +29,9 @@ func _ready():
 		placement.connect("on_placement", on_tower_placement)
 	$CanvasLayer/TowerMenu.connect("build_tower", on_build_tower)
 
+    # Set Next Stage
+	$CanvasLayer/Victory.set_next_stage(config.game['next_stage'])
+
 func _process(_delta):
 	$CanvasLayer/GameDuration.update_duration($Duration.time_left)
 
@@ -107,4 +110,5 @@ func on_enemy_reward(value: int):
 	$CanvasLayer/GameStats.set_resource(data['resource'])
 
 func _on_duration_timeout():
-	get_tree().change_scene_to_file("res://scenes/ui/victory.tscn")
+	get_tree().paused = true
+	$CanvasLayer/Victory.show()

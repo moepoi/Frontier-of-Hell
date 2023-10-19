@@ -40,7 +40,8 @@ var game = {
 				"direction": "front"
 			}
 		]
-	]
+	],
+	"next_stage": 6
 }
 
 var menu = [

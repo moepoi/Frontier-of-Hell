@@ -34,7 +34,8 @@ var game = {
 				"direction": "left"
 			}
 		]
-	]
+	],
+	"next_stage": 4
 }
 
 var menu = [
