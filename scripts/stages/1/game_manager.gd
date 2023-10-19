@@ -104,7 +104,8 @@ func on_enemy_entered_base(enemy):
 	$CanvasLayer/GameStats.set_damage(enemy.damage)
 	
 	if data['health'] < 1:
-		get_tree().change_scene_to_file("res://scenes/ui/defeat.tscn")
+		get_tree().paused = true
+		$CanvasLayer/Defeat.show()
 		
 func on_enemy_reward(value: int):
 	data['resource'] += value

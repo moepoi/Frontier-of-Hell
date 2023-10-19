@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://i18iy1wmek4s"]
+[gd_scene load_steps=16 format=3 uid="uid://i18iy1wmek4s"]
 
 [ext_resource type="Script" path="res://scripts/stages/5/game_manager.gd" id="1_kectu"]
 [ext_resource type="Texture2D" uid="uid://bq6hnxbt4w37u" path="res://assets/tileset/snowland/Snowland@64x64.png" id="1_s0uo6"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="6_yj08v"]
 [ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="7_khyn2"]
 [ext_resource type="PackedScene" uid="uid://r8kq68v8iflb" path="res://scenes/ui/victory.tscn" id="8_j6swr"]
+[ext_resource type="PackedScene" uid="uid://wywjvwp7ausj" path="res://scenes/ui/defeat.tscn" id="9_m6s5a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pf042"]
 texture = ExtResource("1_s0uo6")
@@ -293,6 +294,9 @@ metadata/_edit_use_anchors_ = true
 [node name="GameDuration" parent="CanvasLayer" instance=ExtResource("7_khyn2")]
 
 [node name="Victory" parent="CanvasLayer" instance=ExtResource("8_j6swr")]
+visible = false
+
+[node name="Defeat" parent="CanvasLayer" instance=ExtResource("9_m6s5a")]
 visible = false
 
 [node name="Placements" type="Node2D" parent="."]
