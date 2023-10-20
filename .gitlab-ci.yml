@@ -79,19 +79,19 @@ android:
       - build/android
 
 # GitLab Pages Deploy
-pages:
-  stage: deploy
-  dependencies:
-    - web
-  script:
-    # This ensures the `pages` branch is available.
-    - git fetch
-    - git checkout pages
-    - rm -f *.md
-    - mv build/web/** ./public
-  artifacts:
-    paths:
-      - public
+# pages:
+#   stage: deploy
+#   dependencies:
+#     - web
+#   script:
+#     # This ensures the `pages` branch is available.
+#     - git fetch
+#     - git checkout pages
+#     - rm -f *.md
+#     - mv build/web/** ./public
+#   artifacts:
+#     paths:
+#       - public
 
 # Itch.io Deploy
 itchio:linux:
