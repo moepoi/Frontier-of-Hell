@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dcecwku0if8tg"]
+[gd_scene load_steps=17 format=3 uid="uid://dcecwku0if8tg"]
 
 [ext_resource type="Script" path="res://scripts/stages/6/game_manager.gd" id="1_04mdc"]
 [ext_resource type="Texture2D" uid="uid://d36b03p0hs8kw" path="res://assets/tileset/ashlands/ashlands-32x32.png" id="1_a4nl1"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="3_8n8lc"]
 [ext_resource type="Script" path="res://scripts/stages/6/summon.gd" id="3_gvmm4"]
 [ext_resource type="PackedScene" uid="uid://cy88k4uxt1v37" path="res://scenes/ui/game_stats.tscn" id="4_k4wyn"]
-[ext_resource type="PackedScene" uid="uid://dud7to2ncqrqe" path="res://scenes/enemies/demon_shark.tscn" id="4_kv0eg"]
 [ext_resource type="PackedScene" uid="uid://bvoenhbaqiqj2" path="res://scenes/towers/placement/placement.tscn" id="5_ypi0p"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="6_h3kdb"]
 [ext_resource type="PackedScene" uid="uid://bigsx1yvw0pvg" path="res://scenes/ui/game_duration.tscn" id="8_tv86d"]
@@ -646,7 +645,7 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(851979, 1507338, 16, 786444, 1376266, 16, 786452, 1310730, 16, 851989, 1441802, 16, 1245209, 1507338, 16, 1179678, 1638410, 14, 1114143, 1507338, 14, 1114140, 1441802, 14, 589827, 1638410, 14, 262160, 1703946, 12, 458784, 1703946, 13, 327698, 1507338, 16, 393246, 1376266, 16, 524319, 1310730, 16, 1179659, 1441802, 14, 1179660, 1376266, 14)
+layer_1/tile_data = PackedInt32Array(851979, 1507338, 16, 786444, 1376266, 16, 786452, 1310730, 16, 851989, 1441802, 16, 1245209, 1507338, 16, 1179678, 1638410, 14, 1114143, 1507338, 14, 1114140, 1441802, 14, 589827, 1638410, 14, 327698, 1507338, 16, 393246, 1376266, 16, 524319, 1310730, 16, 1179659, 1441802, 14, 1179660, 1376266, 14, 589853, 1703946, 12, 393238, 1703946, 12, 786450, 1703946, 12, 393227, 1703946, 12, 851974, 1703946, 12, 327713, 1638410, 14, 393247, 1507338, 14, 262174, 1441802, 14, 262157, 1376266, 14, 262158, 1310730, 15, 196624, 1507338, 14)
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_iccfv")
@@ -671,10 +670,6 @@ type = 2
 [node name="Timer" type="Timer" parent="Path2D3"]
 one_shot = true
 
-[node name="Enemy" parent="Path2D3" instance=ExtResource("4_kv0eg")]
-position = Vector2(695.355, 523.855)
-progress = 1150.78
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("2_hovgl")]
@@ -697,19 +692,19 @@ visible = false
 [node name="Placements" type="Node2D" parent="."]
 
 [node name="placement" parent="Placements" instance=ExtResource("5_ypi0p")]
-position = Vector2(203, 444)
+position = Vector2(206, 418)
 
 [node name="placement2" parent="Placements" instance=ExtResource("5_ypi0p")]
-position = Vector2(372, 184)
+position = Vector2(367, 191)
 
 [node name="placement3" parent="Placements" instance=ExtResource("5_ypi0p")]
-position = Vector2(720, 182)
+position = Vector2(721, 192)
 
 [node name="placement4" parent="Placements" instance=ExtResource("5_ypi0p")]
-position = Vector2(598, 411)
+position = Vector2(591, 386)
 
 [node name="placement5" parent="Placements" instance=ExtResource("5_ypi0p")]
-position = Vector2(940, 304)
+position = Vector2(944, 290)
 
 [node name="Bases" type="Node2D" parent="."]
 

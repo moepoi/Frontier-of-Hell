@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvoenhbaqiqj2"]
 
 [ext_resource type="Script" path="res://scripts/towers/placement/placement.gd" id="1_4v8tt"]
-[ext_resource type="Texture2D" uid="uid://0cbsthay7e18" path="res://assets/spritesheets/placement.png" id="2_06tg2"]
+[ext_resource type="Texture2D" uid="uid://n3s2excibc4g" path="res://assets/spritesheets/placement.png" id="2_06tg2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hi6ti"]
 radius = 18.1108
@@ -11,7 +11,7 @@ input_pickable = true
 script = ExtResource("1_4v8tt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.03, 0.03)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_06tg2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
