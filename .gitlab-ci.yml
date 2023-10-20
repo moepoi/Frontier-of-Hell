@@ -9,7 +9,6 @@ cache:
 stages:
   - import-assets
   - export
-  - deploy
 
 variables:
   EXPORT_NAME: Frontier-of-Hell
