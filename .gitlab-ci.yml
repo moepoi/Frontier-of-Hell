@@ -94,23 +94,23 @@ android:
 #       - public
 
 # Itch.io Deploy
-itchio:linux:
-  stage: deploy
-  script:
-    - butler push ./build/linux $ITCHIO_USERNAME/$ITCHIO_GAME:linux
-  dependencies:
-    - linux
+# itchio:linux:
+#   stage: deploy
+#   script:
+#     - butler push ./build/linux $ITCHIO_USERNAME/$ITCHIO_GAME:linux
+#   dependencies:
+#     - linux
 
-itchio:windows:
-  stage: deploy
-  script:
-    - butler push ./build/windows $ITCHIO_USERNAME/$ITCHIO_GAME:windows
-  dependencies:
-    - windows
+# itchio:windows:
+#   stage: deploy
+#   script:
+#     - butler push ./build/windows $ITCHIO_USERNAME/$ITCHIO_GAME:windows
+#   dependencies:
+#     - windows
 
-itchio:macosx:
-  stage: deploy
-  script:
-    - butler push ./build/mac $ITCHIO_USERNAME/$ITCHIO_GAME:mac
-  dependencies:
-    - mac
+# itchio:macosx:
+#   stage: deploy
+#   script:
+#     - butler push ./build/mac $ITCHIO_USERNAME/$ITCHIO_GAME:mac
+#   dependencies:
+#     - mac
