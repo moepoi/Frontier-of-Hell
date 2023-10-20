@@ -15,8 +15,7 @@ var damage: int = 0
 var speed: int = 0
 var shoot_timer: float = 0
 var durability_reduction: int = 0
-
-var is_shoot: bool = true
+var area_damage: bool = false
 
 var enemies = []
 
@@ -32,6 +31,7 @@ func set_tower(id: int, placement_id):
 	speed = config.tower[tower_id]['speed']
 	shoot_timer = config.tower[tower_id]['timer']
 	durability_reduction = config.tower[tower_id]['durability_reduction']
+	area_damage = config.tower[tower_id]['area_damage']
 	
 func set_timer():
 	timer.wait_time = shoot_timer
@@ -62,6 +62,8 @@ func _shoot():
 		bullet_instance.global_position = global_position
 		bullet_instance.speed = speed
 		bullet_instance.damage = damage
+		bullet_instance.area_damage = area_damage
+		bullet_instance.area_damage_target = enemies
 		get_tree().current_scene.add_child(bullet_instance)
 		health -= durability_reduction
 	timer.start()

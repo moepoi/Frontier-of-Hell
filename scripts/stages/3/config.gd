@@ -88,7 +88,8 @@ var tower = [
 		"speed": 3,
 		"damage": 30,
 		"health": 100,
-		"durability_reduction": 10
+		"durability_reduction": 10,
+		"area_damage": false
 	},
 	{
 		"name": "Railgun",
@@ -98,7 +99,8 @@ var tower = [
 		"speed": 3,
 		"damage": 40,
 		"health": 100,
-		"durability_reduction": 10
+		"durability_reduction": 10,
+		"area_damage": false
 	},
 	{
 		"name": "Cannon (V2)",
@@ -108,7 +110,8 @@ var tower = [
 		"speed": 3,
 		"damage": 40,
 		"health": 100,
-		"durability_reduction": 10
+		"durability_reduction": 10,
+		"area_damage": false
 	},
 	{
 		"name": "Railgun (V2)",
@@ -118,7 +121,8 @@ var tower = [
 		"speed": 3,
 		"damage": 40,
 		"health": 100,
-		"durability_reduction": 10
+		"durability_reduction": 10,
+		"area_damage": false
 	},
 	{
 		"name": "Cannon (V3)",
@@ -128,7 +132,8 @@ var tower = [
 		"speed": 3,
 		"damage": 40,
 		"health": 100,
-		"durability_reduction": 10
+		"durability_reduction": 10,
+		"area_damage": true
 	},
 	{
 		"name": "Railgun (V3)",
@@ -138,7 +143,8 @@ var tower = [
 		"speed": 3,
 		"damage": 40,
 		"health": 100,
-		"durability_reduction": 10
+		"durability_reduction": 10,
+		"area_damage": false
 	}
 ]
 
