@@ -1,6 +1,9 @@
 extends Control
 
 
+var game_data = load("res://scripts/data/data.gd").new()
+var data = game_data.load_data()
+
 var next_stage: int = 0
 
 func set_next_stage(value: int):
@@ -8,6 +11,11 @@ func set_next_stage(value: int):
 		next_stage = value
 	else:
 		$Panel/MarginContainer/VBoxContainer/NextStage.text = "Main Menu"
+
+func unlock_next_stage():
+	if next_stage != 0:
+		data['unlocked_stage'] = next_stage
+		game_data.save_data(data)
 
 func _on_next_stage_pressed():
 	get_tree().paused = false

@@ -112,4 +112,5 @@ func on_enemy_reward(value: int):
 
 func _on_duration_timeout():
 	get_tree().paused = true
+	$CanvasLayer/Victory.unlock_next_stage()
 	$CanvasLayer/Victory.show()
