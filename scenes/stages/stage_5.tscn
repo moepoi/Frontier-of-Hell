@@ -308,10 +308,10 @@ position = Vector2(1043, 280)
 position = Vector2(336, 237)
 
 [node name="placement3" parent="Placements" instance=ExtResource("5_vmpbi")]
-position = Vector2(375, 542)
+position = Vector2(204, 516)
 
 [node name="placement4" parent="Placements" instance=ExtResource("5_vmpbi")]
-position = Vector2(679, 541)
+position = Vector2(815, 516)
 
 [node name="Bases" type="Node2D" parent="."]
 
