@@ -69,7 +69,6 @@ android:
   script:
     - echo $SECRET_RELEASE_KEYSTORE_BASE64 | base64 --decode > /root/upload-keystore.jks
     - mkdir -v -p build/android
-    - cd $EXPORT_NAME
     - sed 's@keystore/release=".*"@keystore/release="'/root/upload-keystore.jks'"@g' -i export_presets.cfg
     - sed 's@keystore/release_user=".*"@keystore/release_user="'$SECRET_RELEASE_KEYSTORE_USER'"@g' -i export_presets.cfg
     - sed 's@keystore/release_password=".*"@keystore/release_password="'$SECRET_RELEASE_KEYSTORE_PASSWORD'"@g' -i export_presets.cfg
