@@ -11,6 +11,7 @@ var direction = []
 
 var enemy_vol = Vector2(1,1)
 var old_enemy_pos
+var is_slow: bool = false
 
 func set_config(config_path):
 	config = load(config_path).new()
@@ -58,6 +59,21 @@ func update_healthbar():
 
 func hit(value : int):
 	health = health - value
+
+func slow():
+	var slowTimer = $EnemyBody/SlowTimer
+	if is_slow:
+		slowTimer.stop()
+		slowTimer.start()
+	else:
+		speed = speed - (0.3 * speed)
+		is_slow = true
+		slowTimer.wait_time = 6.0
+		slowTimer.start()
+
+func _on_slow_timer_timeout():
+	speed = config.enemy[enemy_id]['speed']
+	is_slow = false
 
 func destroy():
 	queue_free()

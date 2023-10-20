@@ -170,3 +170,8 @@ offset_right = 86.8186
 offset_bottom = 1.10553
 scale = Vector2(0.3, 0.3)
 show_percentage = false
+
+[node name="SlowTimer" type="Timer" parent="EnemyBody"]
+one_shot = true
+
+[connection signal="timeout" from="EnemyBody/SlowTimer" to="." method="_on_slow_timer_timeout"]
