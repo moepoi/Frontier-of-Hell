@@ -5,7 +5,9 @@ var game = {
 	"duration": 300,
 	"health": 6,
 	"resource": 100,
-	"spawn_timer": 3.0,
+	"spawn_timer": 10.0,
+	"spawn_count": 3,
+	"spawn_delay": 2,
 	"offset": [-20.0, 25.0],
 	"path_direction": [
 		[
@@ -149,44 +151,47 @@ var tower = [
 var enemy = [
 	{
 		"name": "Demon",
+		"asset": preload("res://scenes/enemies/demon.tscn"),
 		"health": 100,
 		"speed": 30,
 		"damage": 1,
-		"reward": 10
+		"reward": 10,
+		"spawn_rate": 0.30
 	},
 	{
 		"name": "Orc",
+		"asset": preload("res://scenes/enemies/orc.tscn"),
 		"health": 100,
 		"speed": 30,
 		"damage": 1,
-		"reward": 20
+		"reward": 20,
+		"spawn_rate": 0.25
 	},
 	{
 		"name": "Cyclops",
+		"asset": preload("res://scenes/enemies/cyclops.tscn"),
 		"health": 100,
 		"speed": 30,
 		"damage": 1,
-		"reward": 30
+		"reward": 30,
+		"spawn_rate": 0.20
 	},
 	{
 		"name": "Demon Boar",
+		"asset": preload("res://scenes/enemies/demon_boar.tscn"),
 		"health": 100,
 		"speed": 30,
 		"damage": 1,
-		"reward": 40
+		"reward": 40,
+		"spawn_rate": 0.15
 	},
 	{
 		"name": "Demon Fungus",
+		"asset": preload("res://scenes/enemies/demon_fungus.tscn"),
 		"health": 100,
 		"speed": 30,
 		"damage": 1,
-		"reward": 50
-	},
-	{
-		"name": "Demon Shark",
-		"health": 100,
-		"speed": 30,
-		"damage": 1,
-		"reward": 60
+		"reward": 50,
+		"spawn_rate": 0.10
 	}
 ]
