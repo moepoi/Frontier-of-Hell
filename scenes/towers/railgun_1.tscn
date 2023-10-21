@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://biyhuyx177dw8"]
+[gd_scene load_steps=14 format=3 uid="uid://biyhuyx177dw8"]
 
 [ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_8623k"]
+[ext_resource type="AudioStream" uid="uid://0c62t5vtlwh6" path="res://assets/audio/railgun.mp3" id="3_ixlr3"]
 [ext_resource type="Texture2D" uid="uid://c02ebkmjpxium" path="res://assets/spritesheets/towers/railgun-1.png" id="3_vo8au"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_60mof"]
@@ -98,6 +99,10 @@ offset_bottom = 12.0
 rotation = 1.5708
 scale = Vector2(0.3, 0.3)
 show_percentage = false
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ixlr3")
+volume_db = -20.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
