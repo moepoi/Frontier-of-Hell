@@ -4,6 +4,7 @@ signal on_destroy(tower_placement_id)
 
 @onready var rayCast = $RayCast2D
 @onready var timer = $Timer
+@onready var shoot = $Shoot
 
 var bullet: PackedScene = null
 
@@ -58,6 +59,7 @@ func _physics_process(_delta):
 		
 func _shoot():
 	if bullet:
+		shoot.play()
 		var bullet_instance: Node2D = bullet.instantiate()
 		bullet_instance.dir = rotation
 		bullet_instance.rotation = rotation
