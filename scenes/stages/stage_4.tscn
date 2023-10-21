@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cxo5fh50r6uxs"]
+[gd_scene load_steps=17 format=3 uid="uid://cxo5fh50r6uxs"]
 
 [ext_resource type="Texture2D" uid="uid://bq6hnxbt4w37u" path="res://assets/tileset/snowland/Snowland@64x64.png" id="1_436vn"]
 [ext_resource type="Script" path="res://scripts/stages/4/game_manager.gd" id="1_lhtrq"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="8_trc1r"]
 [ext_resource type="PackedScene" uid="uid://r8kq68v8iflb" path="res://scenes/ui/victory.tscn" id="8_x1qs2"]
 [ext_resource type="PackedScene" uid="uid://wywjvwp7ausj" path="res://scenes/ui/defeat.tscn" id="9_wmgvj"]
+[ext_resource type="AudioStream" uid="uid://bn6agbc77m0au" path="res://assets/audio/stage.mp3" id="12_8sjqs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8oq7c"]
 texture = ExtResource("1_436vn")
@@ -322,6 +323,11 @@ position = Vector2(951, -44)
 
 [node name="Duration" type="Timer" parent="."]
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_8sjqs")
+volume_db = -40.0
+autoplay = true
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D2/Timer" to="Path2D2" method="_on_timer_timeout"]
