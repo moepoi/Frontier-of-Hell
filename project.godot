@@ -12,9 +12,11 @@ config_version=5
 
 config/name="Frontier of Hell"
 run/main_scene="res://scenes/ui/main_menu.tscn"
+config/quit_on_go_back=false
 config/features=PackedStringArray("4.1", "Mobile")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/image="res://assets/icons/logo.png"
+boot_splash/fullsize=false
 config/icon="res://assets/icons/logo.png"
 boot_splash/minimum_display_time=3
 
