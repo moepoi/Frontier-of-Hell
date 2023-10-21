@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://r8kq68v8iflb"]
+[gd_scene load_steps=4 format=3 uid="uid://r8kq68v8iflb"]
 
 [ext_resource type="Texture2D" uid="uid://bbll7rkbty50k" path="res://assets/icons/victory.png" id="1_3fse5"]
 [ext_resource type="Script" path="res://scripts/ui/victory.gd" id="1_qdex0"]
+[ext_resource type="AudioStream" uid="uid://b6sp0yj21vn17" path="res://assets/audio/victory.mp3" id="3_ya7rd"]
 
 [node name="Victory" type="Control"]
 process_mode = 2
@@ -48,5 +49,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 text = "Next Stage"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ya7rd")
+volume_db = -30.0
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/NextStage" to="." method="_on_next_stage_pressed"]
