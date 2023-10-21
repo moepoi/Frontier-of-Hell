@@ -14,8 +14,9 @@ func set_next_stage(value: int):
 
 func unlock_next_stage():
 	if next_stage != 0:
-		data['unlocked_stage'] = next_stage
-		game_data.save_data(data)
+		if data['unlocked_stage'] < next_stage:
+			data['unlocked_stage'] = next_stage
+			game_data.save_data(data)
 
 func _on_next_stage_pressed():
 	get_tree().paused = false
