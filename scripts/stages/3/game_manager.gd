@@ -105,6 +105,7 @@ func on_enemy_entered_base(enemy):
 	if data['health'] < 1:
 		get_tree().paused = true
 		$CanvasLayer/Defeat.show()
+		$CanvasLayer/Defeat/AudioStreamPlayer.play()
 		
 func on_enemy_reward(value: int):
 	data['resource'] += value
