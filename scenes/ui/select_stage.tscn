@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwf2fhvjfq7xg"]
+[gd_scene load_steps=11 format=3 uid="uid://cwf2fhvjfq7xg"]
 
 [ext_resource type="Script" path="res://scripts/ui/select_stage.gd" id="1_t86bq"]
+[ext_resource type="Theme" uid="uid://bt3yyqwlp4f7j" path="res://themes/title_text.tres" id="2_gqow0"]
 [ext_resource type="Texture2D" uid="uid://dcd26ajdxnv5s" path="res://assets/icons/locked.png" id="2_ppj84"]
+[ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="3_kfu7o"]
+[ext_resource type="Texture2D" uid="uid://2rld5n0v61af" path="res://assets/backgrounds/stage-1.png" id="4_1a6a4"]
+[ext_resource type="Texture2D" uid="uid://d0qcne33grdd4" path="res://assets/backgrounds/stage-2.png" id="6_agxb7"]
+[ext_resource type="Texture2D" uid="uid://u428vvqpwphd" path="res://assets/backgrounds/stage-3.png" id="7_d2qvt"]
+[ext_resource type="Texture2D" uid="uid://cushhcqgpt2wi" path="res://assets/backgrounds/stage-4.png" id="8_jnehq"]
+[ext_resource type="Texture2D" uid="uid://dflfg140pfdfj" path="res://assets/backgrounds/stage-5.png" id="9_jt253"]
+[ext_resource type="Texture2D" uid="uid://cvw4fruerjwk6" path="res://assets/backgrounds/stage-6.png" id="10_xmmdy"]
 
 [node name="SelectStage" type="Control"]
 layout_mode = 3
@@ -37,18 +45,19 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 0
+theme = ExtResource("2_gqow0")
 text = "Select Stage"
 
 [node name="Back" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 0
+theme = ExtResource("3_kfu7o")
 text = "Back"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
@@ -62,6 +71,12 @@ theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
+
+[node name="Preview" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_1a6a4")
+expand_mode = 2
+stretch_mode = 6
 
 [node name="Locked" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
 layout_mode = 2
@@ -81,6 +96,12 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
+[node name="Preview" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("6_agxb7")
+expand_mode = 2
+stretch_mode = 6
+
 [node name="Locked" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer2"]
 layout_mode = 2
 texture = ExtResource("2_ppj84")
@@ -98,6 +119,12 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 10
+
+[node name="Preview" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3"]
+layout_mode = 2
+texture = ExtResource("7_d2qvt")
+expand_mode = 2
+stretch_mode = 6
 
 [node name="Locked" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3"]
 layout_mode = 2
@@ -121,6 +148,12 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
+[node name="Preview" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("8_jnehq")
+expand_mode = 2
+stretch_mode = 6
+
 [node name="Locked" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
 layout_mode = 2
 texture = ExtResource("2_ppj84")
@@ -139,6 +172,12 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 20
 
+[node name="Preview" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer2"]
+layout_mode = 2
+texture = ExtResource("9_jt253")
+expand_mode = 2
+stretch_mode = 6
+
 [node name="Locked" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer2"]
 layout_mode = 2
 texture = ExtResource("2_ppj84")
@@ -156,6 +195,12 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
+
+[node name="Preview" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer3"]
+layout_mode = 2
+texture = ExtResource("10_xmmdy")
+expand_mode = 2
+stretch_mode = 6
 
 [node name="Locked" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer3"]
 layout_mode = 2
