@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cfelbpijg3dp0"]
+[gd_scene load_steps=15 format=3 uid="uid://cfelbpijg3dp0"]
 
 [ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_3s425"]
 [ext_resource type="AudioStream" uid="uid://0c62t5vtlwh6" path="res://assets/audio/railgun.mp3" id="3_f25ix"]
 [ext_resource type="Texture2D" uid="uid://dk3toqlc7igld" path="res://assets/spritesheets/towers/railgun-3.png" id="3_g5gi2"]
+[ext_resource type="Theme" uid="uid://ciywhmrj7l712" path="res://themes/health_bar.tres" id="3_sher0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3wst"]
 atlas = ExtResource("3_g5gi2")
@@ -97,6 +98,7 @@ offset_right = 106.0
 offset_bottom = 12.0
 rotation = 1.5708
 scale = Vector2(0.3, 0.3)
+theme = ExtResource("3_sher0")
 show_percentage = false
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="."]

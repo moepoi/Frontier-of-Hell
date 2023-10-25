@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bexddlltacp6k"]
+[gd_scene load_steps=15 format=3 uid="uid://bexddlltacp6k"]
 
 [ext_resource type="Script" path="res://scripts/towers/tower.gd" id="1_decej"]
+[ext_resource type="Theme" uid="uid://ciywhmrj7l712" path="res://themes/health_bar.tres" id="3_gelth"]
 [ext_resource type="AudioStream" uid="uid://bx4oba7yo6duu" path="res://assets/audio/cannon.mp3" id="3_h4ljg"]
 [ext_resource type="Texture2D" uid="uid://2ovf2ymtftgo" path="res://assets/spritesheets/towers/cannon-1.png" id="3_q7708"]
 
@@ -91,13 +92,13 @@ shape = SubResource("CircleShape2D_wmsbt")
 one_shot = true
 
 [node name="HealthBar" type="ProgressBar" parent="."]
-modulate = Color(0.431373, 0.815686, 0, 1)
 offset_left = 4.0
 offset_top = -15.0
 offset_right = 106.0
 offset_bottom = 12.0
 rotation = 1.5708
 scale = Vector2(0.3, 0.3)
+theme = ExtResource("3_gelth")
 show_percentage = false
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="."]
