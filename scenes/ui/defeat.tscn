@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://wywjvwp7ausj"]
+[gd_scene load_steps=6 format=3 uid="uid://wywjvwp7ausj"]
 
 [ext_resource type="Texture2D" uid="uid://b3sb2q80p1fbd" path="res://assets/icons/defeat.png" id="1_bioyr"]
 [ext_resource type="Script" path="res://scripts/ui/defeat.gd" id="1_sbbw3"]
+[ext_resource type="Theme" uid="uid://bt3yyqwlp4f7j" path="res://themes/title_text.tres" id="2_57ey4"]
 [ext_resource type="AudioStream" uid="uid://cqbl8resqabdd" path="res://assets/audio/defeat.mp3" id="3_xsj1k"]
+[ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="4_ol178"]
 
 [node name="Defeat" type="Control"]
 process_mode = 2
@@ -37,6 +39,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+theme = ExtResource("2_57ey4")
 text = "DEFEAT"
 
 [node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer"]
@@ -48,6 +51,7 @@ texture = ExtResource("1_bioyr")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+theme = ExtResource("4_ol178")
 text = "Main Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
