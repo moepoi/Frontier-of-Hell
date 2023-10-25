@@ -101,7 +101,7 @@ show_percentage = false
 
 [node name="Shoot" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_cih6o")
-volume_db = -40.0
+volume_db = 1.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_body_exited"]
