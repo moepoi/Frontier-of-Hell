@@ -48,11 +48,11 @@ theme_override_constants/margin_bottom = 50
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Panel/MarginContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect/Panel/MarginContainer/VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="TextureRect/Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-texture = ExtResource("2_l26fo")
+texture_normal = ExtResource("2_l26fo")
 stretch_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/Panel/MarginContainer/VBoxContainer"]
@@ -88,12 +88,18 @@ size_flags_horizontal = 10
 theme = ExtResource("4_4d3eq")
 text = "Exit"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_xkvpi")
 volume_db = 1.0
 autoplay = true
 
+[connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/TextureButton" to="." method="_on_logo_pressed"]
 [connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer/About" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
