@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8pdp1x331u5c"]
+[gd_scene load_steps=6 format=3 uid="uid://b8pdp1x331u5c"]
 
 [ext_resource type="Texture2D" uid="uid://c1qbpse383sys" path="res://assets/backgrounds/main-bg.png" id="1_28cjd"]
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_6741p"]
 [ext_resource type="Texture2D" uid="uid://dm8ug0o5361wn" path="res://assets/icons/logo.png" id="2_l26fo"]
 [ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="4_4d3eq"]
+[ext_resource type="AudioStream" uid="uid://dhydsnb0wpl7t" path="res://assets/audio/main.mp3" id="5_xkvpi"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -86,6 +87,11 @@ layout_mode = 2
 size_flags_horizontal = 10
 theme = ExtResource("4_4d3eq")
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_xkvpi")
+volume_db = 1.0
+autoplay = true
 
 [connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]
