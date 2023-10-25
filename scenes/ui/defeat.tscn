@@ -56,6 +56,6 @@ text = "Main Menu"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_xsj1k")
-volume_db = -30.0
+volume_db = 1.0
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/MainMenu" to="." method="_on_main_menu_pressed"]
