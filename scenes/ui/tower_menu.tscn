@@ -7,10 +7,11 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_55n31"]
 bg_color = Color(0.12549, 0.12549, 0.12549, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+border_color = Color(0.12549, 0.12549, 0.12549, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 corner_detail = 20
 
 [sub_resource type="Theme" id="Theme_6r0bt"]
@@ -32,9 +33,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -161.0
-offset_top = -141.0
+offset_top = -174.0
 offset_right = 156.0
-offset_bottom = 184.0
+offset_bottom = 181.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_55n31")
@@ -64,7 +65,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "  Build/Upgrade Tower"
 
-[node name="Close" type="Button" parent="Panel/MarginContainer/VBoxContainer/Top"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/Top"]
+layout_mode = 2
+theme_override_constants/margin_right = 10
+
+[node name="Close" type="Button" parent="Panel/MarginContainer/VBoxContainer/Top/MarginContainer"]
 layout_mode = 2
 text = "X"
 flat = true
@@ -113,6 +118,6 @@ layout_mode = 2
 size_flags_horizontal = 6
 text = "20000"
 
-[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Top/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Top/MarginContainer/Close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Middle/TowerOption" to="." method="_on_tower_option_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Middle/TowerOption2" to="." method="_on_tower_option_2_pressed"]
