@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwf2fhvjfq7xg"]
+[gd_scene load_steps=12 format=3 uid="uid://cwf2fhvjfq7xg"]
 
 [ext_resource type="Script" path="res://scripts/ui/select_stage.gd" id="1_t86bq"]
 [ext_resource type="Theme" uid="uid://bt3yyqwlp4f7j" path="res://themes/title_text.tres" id="2_gqow0"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cushhcqgpt2wi" path="res://assets/backgrounds/stage-4.png" id="8_jnehq"]
 [ext_resource type="Texture2D" uid="uid://dflfg140pfdfj" path="res://assets/backgrounds/stage-5.png" id="9_jt253"]
 [ext_resource type="Texture2D" uid="uid://cvw4fruerjwk6" path="res://assets/backgrounds/stage-6.png" id="10_xmmdy"]
+[ext_resource type="AudioStream" uid="uid://dwm10m707ygyb" path="res://assets/audio/select-stage.mp3" id="11_1rv5g"]
 
 [node name="SelectStage" type="Control"]
 layout_mode = 3
@@ -211,6 +212,11 @@ stretch_mode = 5
 [node name="Stage 6" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer3"]
 layout_mode = 2
 text = "6"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_1rv5g")
+volume_db = 1.0
+autoplay = true
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer/Stage 1" to="." method="_on_stage_1_pressed"]
