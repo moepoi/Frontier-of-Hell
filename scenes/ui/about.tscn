@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cmafth1g3e7fq"]
+[gd_scene load_steps=8 format=3 uid="uid://cmafth1g3e7fq"]
 
 [ext_resource type="Script" path="res://scripts/ui/about.gd" id="1_3w66n"]
+[ext_resource type="Theme" uid="uid://bt3yyqwlp4f7j" path="res://themes/title_text.tres" id="2_iiwsw"]
+[ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="3_be5ml"]
+[ext_resource type="Texture2D" uid="uid://cv4b706h3q0un" path="res://assets/icons/godot.png" id="4_crlyq"]
+[ext_resource type="Texture2D" uid="uid://cr6tjmhggnyy5" path="res://assets/icons/gamedev.jpg" id="5_k1dgm"]
+[ext_resource type="Texture2D" uid="uid://cvr0tn4rm24dd" path="res://assets/icons/untar.jpg" id="6_1ssdm"]
+
+[sub_resource type="Theme" id="Theme_841u2"]
+Label/font_sizes/font_size = 30
 
 [node name="About" type="Control"]
 layout_mode = 3
@@ -36,18 +44,19 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 2
+size_flags_horizontal = 0
 size_flags_vertical = 0
+theme = ExtResource("2_iiwsw")
 text = "About"
 
 [node name="Back" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 0
+theme = ExtResource("3_be5ml")
 text = "Back"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
@@ -57,16 +66,52 @@ size_flags_vertical = 3
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sodales velit suscipit nibh sollicitudin, aliquam hendrerit sapien efficitur. Vestibulum neque justo, fermentum at consectetur nec, euismod volutpat urna. Vestibulum rutrum justo eu efficitur interdum. Phasellus a facilisis nulla. Morbi ullamcorper ut dui vel aliquet. Aenean fringilla, nisl feugiat maximus tristique, velit neque auctor ipsum, ac tincidunt massa sem sit amet risus. Nunc odio libero, vulputate in dictum quis, mollis rutrum lectus. Vestibulum in congue metus. Duis ac erat nulla. Sed lacinia feugiat purus, vel blandit justo condimentum non. Vivamus tincidunt gravida magna, eget finibus risus varius et. Nulla facilisi.
+theme = SubResource("Theme_841u2")
+text = "Developed By :
+- Michael William Jonathan
 
-Phasellus sit amet sapien molestie, condimentum dolor sed, laoreet nulla. Sed arcu mi, dignissim faucibus quam id, molestie hendrerit dui. Nam consequat erat id nunc bibendum dignissim. Suspendisse porta iaculis enim, ut auctor nisi ultrices vitae. Integer gravida dignissim risus. Donec scelerisque ac lectus ut rhoncus. Duis malesuada aliquam lorem, vitae congue erat sodales non. Suspendisse congue convallis velit. Ut vestibulum vel nunc eu congue. In hac habitasse platea dictumst."
-horizontal_alignment = 3
-vertical_alignment = 3
+Supervisor :
+- Ir. Jeanny Pragantha, M. Eng
+- Darius Andana Haris, M. TI"
 autowrap_mode = 3
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 60
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("4_crlyq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+texture = ExtResource("5_k1dgm")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+texture = ExtResource("6_1ssdm")
+expand_mode = 2
+stretch_mode = 5
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/Back" to="." method="_on_back_pressed"]
