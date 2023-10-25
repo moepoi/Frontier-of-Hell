@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c1qbpse383sys" path="res://assets/backgrounds/main-bg.png" id="1_28cjd"]
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_6741p"]
-[ext_resource type="Texture2D" uid="uid://dm8ug0o5361wn" path="res://assets/icons/logo-main.png" id="2_l26fo"]
+[ext_resource type="Texture2D" uid="uid://dm8ug0o5361wn" path="res://assets/icons/logo.png" id="2_l26fo"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
