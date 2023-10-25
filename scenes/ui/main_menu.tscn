@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8pdp1x331u5c"]
+[gd_scene load_steps=5 format=3 uid="uid://b8pdp1x331u5c"]
 
 [ext_resource type="Texture2D" uid="uid://c1qbpse383sys" path="res://assets/backgrounds/main-bg.png" id="1_28cjd"]
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="1_6741p"]
 [ext_resource type="Texture2D" uid="uid://dm8ug0o5361wn" path="res://assets/icons/logo.png" id="2_l26fo"]
+[ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="4_4d3eq"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -60,13 +61,15 @@ size_flags_vertical = 3
 [node name="StartGame" type="Button" parent="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 2
+theme = ExtResource("4_4d3eq")
 text = "Start Game"
 
 [node name="HowToPlay" type="Button" parent="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 2
+theme = ExtResource("4_4d3eq")
 text = "How To Play"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/Panel/MarginContainer/VBoxContainer"]
@@ -75,11 +78,13 @@ layout_mode = 2
 [node name="About" type="Button" parent="TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 2
+theme = ExtResource("4_4d3eq")
 text = "About"
 
 [node name="Exit" type="Button" parent="TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
+theme = ExtResource("4_4d3eq")
 text = "Exit"
 
 [connection signal="pressed" from="TextureRect/Panel/MarginContainer/VBoxContainer/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
