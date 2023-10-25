@@ -104,4 +104,6 @@ texture = ExtResource("3_r1i66")
 layout_mode = 2
 texture = ExtResource("3_r1i66")
 
+[connection signal="mouse_entered" from="Pause/PauseButton" to="." method="_on_pause_button_hold"]
+[connection signal="mouse_exited" from="Pause/PauseButton" to="." method="_on_pause_button_release"]
 [connection signal="pressed" from="Pause/PauseButton" to="." method="_on_pause_button_pressed"]
