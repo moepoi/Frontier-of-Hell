@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://r8kq68v8iflb"]
+[gd_scene load_steps=6 format=3 uid="uid://r8kq68v8iflb"]
 
 [ext_resource type="Texture2D" uid="uid://bbll7rkbty50k" path="res://assets/icons/victory.png" id="1_3fse5"]
 [ext_resource type="Script" path="res://scripts/ui/victory.gd" id="1_qdex0"]
+[ext_resource type="Theme" uid="uid://bt3yyqwlp4f7j" path="res://themes/title_text.tres" id="2_d52hs"]
 [ext_resource type="AudioStream" uid="uid://b6sp0yj21vn17" path="res://assets/audio/victory.mp3" id="3_ya7rd"]
+[ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="4_hwi6u"]
 
 [node name="Victory" type="Control"]
 process_mode = 2
@@ -37,6 +39,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+theme = ExtResource("2_d52hs")
 text = "VICTORY"
 
 [node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer"]
@@ -48,6 +51,7 @@ texture = ExtResource("1_3fse5")
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+theme = ExtResource("4_hwi6u")
 text = "Next Stage"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
