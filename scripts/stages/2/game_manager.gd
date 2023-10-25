@@ -104,6 +104,12 @@ func on_enemy_entered_base(enemy):
 	
 	if data['health'] < 1:
 		get_tree().paused = true
+
+		# Clear some components
+		$CanvasLayer/TowerMenu.hide()
+		$CanvasLayer/GameStats.hide()
+		$CanvasLayer/GameDuration.hide()
+
 		$CanvasLayer/Defeat.show()
 		$CanvasLayer/Defeat/AudioStreamPlayer.play()
 		
@@ -118,7 +124,7 @@ func _on_duration_timeout():
 	$CanvasLayer/TowerMenu.hide()
 	$CanvasLayer/GameStats.hide()
 	$CanvasLayer/GameDuration.hide()
-	
+
 	$CanvasLayer/Victory.unlock_next_stage()
 	$CanvasLayer/Victory.show()
 	$CanvasLayer/Victory/AudioStreamPlayer.play()

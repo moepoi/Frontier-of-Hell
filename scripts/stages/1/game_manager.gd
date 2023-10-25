@@ -105,6 +105,12 @@ func on_enemy_entered_base(enemy):
 	
 	if data['health'] < 1:
 		get_tree().paused = true
+
+		# Clear some components
+		$CanvasLayer/TowerMenu.hide()
+		$CanvasLayer/GameStats.hide()
+		$CanvasLayer/GameDuration.hide()
+	
 		$CanvasLayer/Defeat.show()
 		$CanvasLayer/Defeat/AudioStreamPlayer.play()
 		
