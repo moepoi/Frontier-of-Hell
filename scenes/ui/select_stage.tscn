@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwf2fhvjfq7xg"]
+[gd_scene load_steps=13 format=3 uid="uid://cwf2fhvjfq7xg"]
 
 [ext_resource type="Script" path="res://scripts/ui/select_stage.gd" id="1_t86bq"]
 [ext_resource type="Theme" uid="uid://bt3yyqwlp4f7j" path="res://themes/title_text.tres" id="2_gqow0"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="3_kfu7o"]
 [ext_resource type="Texture2D" uid="uid://2rld5n0v61af" path="res://assets/backgrounds/stage-1.png" id="4_1a6a4"]
 [ext_resource type="Texture2D" uid="uid://d0qcne33grdd4" path="res://assets/backgrounds/stage-2.png" id="6_agxb7"]
+[ext_resource type="Theme" uid="uid://by8j8rkgcbm8p" path="res://themes/stage_button.tres" id="6_j48br"]
 [ext_resource type="Texture2D" uid="uid://u428vvqpwphd" path="res://assets/backgrounds/stage-3.png" id="7_d2qvt"]
 [ext_resource type="Texture2D" uid="uid://cushhcqgpt2wi" path="res://assets/backgrounds/stage-4.png" id="8_jnehq"]
 [ext_resource type="Texture2D" uid="uid://dflfg140pfdfj" path="res://assets/backgrounds/stage-5.png" id="9_jt253"]
@@ -87,6 +88,7 @@ stretch_mode = 5
 
 [node name="Stage 1" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer"]
 layout_mode = 2
+theme = ExtResource("6_j48br")
 text = "1"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -111,6 +113,7 @@ stretch_mode = 5
 
 [node name="Stage 2" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer2"]
 layout_mode = 2
+theme = ExtResource("6_j48br")
 text = "2"
 
 [node name="MarginContainer3" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
@@ -135,6 +138,7 @@ stretch_mode = 5
 
 [node name="Stage 3" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2/MarginContainer3"]
 layout_mode = 2
+theme = ExtResource("6_j48br")
 text = "3"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
@@ -163,6 +167,7 @@ stretch_mode = 5
 
 [node name="Stage 4" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer"]
 layout_mode = 2
+theme = ExtResource("6_j48br")
 text = "4"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3"]
@@ -187,6 +192,7 @@ stretch_mode = 5
 
 [node name="Stage 5" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer2"]
 layout_mode = 2
+theme = ExtResource("6_j48br")
 text = "5"
 
 [node name="MarginContainer3" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3"]
@@ -211,6 +217,7 @@ stretch_mode = 5
 
 [node name="Stage 6" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3/MarginContainer3"]
 layout_mode = 2
+theme = ExtResource("6_j48br")
 text = "6"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
