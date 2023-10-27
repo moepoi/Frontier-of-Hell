@@ -11,6 +11,7 @@ var direction = []
 
 var enemy_vol = Vector2(1,1)
 var old_enemy_pos
+var max_health: int = 0
 var is_slow: bool = false
 
 func set_config(config_path):
@@ -22,6 +23,10 @@ func set_enemy(id: int):
 	damage = config.enemy[enemy_id]['damage']
 	speed = config.enemy[enemy_id]['speed']
 	reward = config.enemy[enemy_id]['reward']
+
+	max_health = health
+	$EnemyBody/HealthBar.max_value = max_health
+	$EnemyBody/HealthBar.visible = false
 	
 func set_direction(type: int):
 	var path_direction = config.game['path_direction'][type]
@@ -52,9 +57,7 @@ func change_direction(current_progress):
 func update_healthbar():
 	$EnemyBody/HealthBar.value = health
 	
-	if health >= 100:
-		$EnemyBody/HealthBar.visible = false
-	else:
+	if health < max_health:
 		$EnemyBody/HealthBar.visible = true
 
 func hit(value : int):
