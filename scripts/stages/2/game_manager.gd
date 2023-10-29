@@ -20,6 +20,7 @@ func _ready():
 	# Connect to Signal
 	$CanvasLayer/GameStats.connect("on_paused", on_game_paused)
 	$CanvasLayer/PauseMenu.connect("on_resume", on_game_resume)
+	$CanvasLayer/GameStats.connect("on_fast_forward", on_game_fast_forward)
 	$CanvasLayer/GameStats.set_resource(data['resource'])
 	var bases = $Bases.get_children()
 	for base in bases:
@@ -44,6 +45,12 @@ func on_game_resume():
 	data['paused'] = !data['paused']
 	get_tree().paused = data['paused']
 	$CanvasLayer/PauseMenu.hide_menu()
+
+func on_game_fast_forward():
+	if Engine.get_time_scale() == 1.0:
+		Engine.time_scale = 2.0
+	else:
+		Engine.time_scale = 1.0
 	
 func on_tower_placement(pos, tower_placement_id):
 	var tower_id = null

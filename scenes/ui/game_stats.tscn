@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy88k4uxt1v37"]
+[gd_scene load_steps=6 format=3 uid="uid://cy88k4uxt1v37"]
 
 [ext_resource type="Texture2D" uid="uid://d2d7ab8q2vik4" path="res://assets/icons/label_bg.png" id="1_1gxsd"]
 [ext_resource type="Script" path="res://scripts/ui/game_stats.gd" id="1_ui7x4"]
 [ext_resource type="Texture2D" uid="uid://derifasksdfub" path="res://assets/icons/pause.png" id="2_imq5h"]
 [ext_resource type="Texture2D" uid="uid://e8dmiy1xr5g3" path="res://assets/icons/health.png" id="3_r1i66"]
+[ext_resource type="Texture2D" uid="uid://bn8pc3vkskcny" path="res://assets/icons/fast-forward.png" id="4_frnkw"]
 
 [node name="GameStats" type="Control"]
 layout_mode = 3
@@ -61,6 +62,31 @@ grow_vertical = 2
 scale = Vector2(0.015, 0.015)
 texture_normal = ExtResource("2_imq5h")
 
+[node name="FastForward" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 918.0
+offset_top = 9.0
+offset_right = 955.0
+offset_bottom = 44.0
+texture = ExtResource("1_1gxsd")
+
+[node name="FastForwardButton" type="TextureButton" parent="FastForward"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.5
+offset_top = -15.5
+offset_right = 2032.5
+offset_bottom = 2032.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.015, 0.015)
+texture_normal = ExtResource("4_frnkw")
+stretch_mode = 5
+
 [node name="Health" type="NinePatchRect" parent="."]
 layout_mode = 1
 anchors_preset = 4
@@ -107,3 +133,6 @@ texture = ExtResource("3_r1i66")
 [connection signal="mouse_entered" from="Pause/PauseButton" to="." method="_on_pause_button_hold"]
 [connection signal="mouse_exited" from="Pause/PauseButton" to="." method="_on_pause_button_release"]
 [connection signal="pressed" from="Pause/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="mouse_entered" from="FastForward/FastForwardButton" to="." method="_on_fast_forward_button_hold"]
+[connection signal="mouse_exited" from="FastForward/FastForwardButton" to="." method="_on_fast_forward_button_release"]
+[connection signal="pressed" from="FastForward/FastForwardButton" to="." method="_on_fast_forward_button_pressed"]
