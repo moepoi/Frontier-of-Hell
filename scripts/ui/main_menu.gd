@@ -9,6 +9,9 @@ var data = game_data.load_data()
 var debug_state = 0
 
 func _ready():
+	# Init Engine time scale
+	Engine.time_scale = 1.0
+	
 	if data == null:
 		game_data.save_data({
 			"debug": false,

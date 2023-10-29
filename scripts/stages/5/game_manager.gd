@@ -19,6 +19,9 @@ func _ready():
 	if game_data.load_data()['debug']:
 		data['resource'] = 999999
 
+	# Init Engine time scale
+	Engine.time_scale = 1.0
+
 	# Set Duration & Start Timer
 	duration.wait_time = config.game['duration']
 	duration.start()
