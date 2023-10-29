@@ -18,6 +18,9 @@ func _ready():
 			"unlocked_stage": 1
 		})
 
+	if OS.get_name() == "Web":
+		$TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer/Exit.hide()
+
 func _on_logo_pressed():
 	if timer.is_stopped():
 		timer.start()
