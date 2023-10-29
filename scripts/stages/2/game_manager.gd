@@ -3,6 +3,8 @@ extends Node2D
 var config_path = "res://scripts/stages/2/config.gd"
 var config = load(config_path).new()
 
+var game_data = load("res://scripts/data/data.gd").new()
+
 @onready var duration = $Duration
 
 var data = {
@@ -13,6 +15,10 @@ var data = {
 }
 
 func _ready():
+	# Debug Mode
+	if game_data.load_data()['debug']:
+		data['resource'] = 999999
+
 	# Set Duration & Start Timer
 	duration.wait_time = config.game['duration']
 	duration.start()

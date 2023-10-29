@@ -2,13 +2,13 @@ extends Control
 
 
 var game_data = load("res://scripts/data/data.gd").new()
+var data = game_data.load_data()
 
 @onready var timer = $Timer
 
 var debug_state = 0
 
 func _ready():
-	var data = game_data.load_data()
 	if data == null:
 		game_data.save_data({
 			"debug": false,
@@ -22,10 +22,16 @@ func _on_logo_pressed():
 	debug_state += 1
 
 	if debug_state >= 6:
-		game_data.save_data({
-			"debug": true,
-			"unlocked_stage": 6
-		})
+		if data['debug']:
+			game_data.save_data({
+				"debug": false,
+				"unlocked_stage": 1
+			})
+		else:
+			game_data.save_data({
+				"debug": true,
+				"unlocked_stage": 6
+			})
 
 func _on_timer_timeout():
 	debug_state = 0
