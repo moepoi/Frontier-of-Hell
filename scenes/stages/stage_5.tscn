@@ -328,7 +328,6 @@ one_shot = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_2xeuw")
 volume_db = 1.0
-autoplay = true
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Path2D2/Timer" to="Path2D2" method="_on_timer_timeout"]

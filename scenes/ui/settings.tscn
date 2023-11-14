@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://ons67oqg25vu"]
+
+[ext_resource type="Script" path="res://scripts/ui/settings.gd" id="1_kci63"]
+[ext_resource type="Theme" uid="uid://bt3yyqwlp4f7j" path="res://themes/title_text.tres" id="2_2enke"]
+[ext_resource type="Theme" uid="uid://caw53lcko4jnt" path="res://themes/button.tres" id="3_jiiby"]
+
+[sub_resource type="Theme" id="Theme_ulpvq"]
+Label/font_sizes/font_size = 30
+
+[sub_resource type="Theme" id="Theme_23erg"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kci63")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 1132.0
+offset_bottom = 82.0
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("2_2enke")
+text = "Settings"
+
+[node name="Back" type="Button" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
+theme = ExtResource("3_jiiby")
+text = "Back"
+
+[node name="Volume" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 173.0
+offset_right = 233.0
+offset_bottom = 218.0
+theme = SubResource("Theme_ulpvq")
+text = "Sound Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="Panel"]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 181.0
+offset_right = 634.0
+offset_bottom = 197.0
+scale = Vector2(2, 2)
+min_value = -40.0
+max_value = 1.0
+value = 1.0
+
+[node name="BGM" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 260.0
+offset_right = 233.0
+offset_bottom = 305.0
+theme = SubResource("Theme_ulpvq")
+text = "BGM"
+
+[node name="BGMController" type="CheckButton" parent="Panel"]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 256.0
+offset_right = 311.0
+offset_bottom = 280.0
+scale = Vector2(2, 2)
+theme = SubResource("Theme_23erg")
+
+[node name="SFX" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 352.0
+offset_right = 234.0
+offset_bottom = 397.0
+theme = SubResource("Theme_ulpvq")
+text = "SFX"
+
+[node name="SFXController" type="CheckButton" parent="Panel"]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 347.0
+offset_right = 311.0
+offset_bottom = 371.0
+scale = Vector2(2, 2)
+
+[connection signal="pressed" from="Panel/HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="Panel/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="toggled" from="Panel/BGMController" to="." method="_on_bgm_controller_toggled"]
+[connection signal="toggled" from="Panel/SFXController" to="." method="_on_sfx_controller_toggled"]

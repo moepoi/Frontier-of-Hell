@@ -20,6 +20,10 @@ boot_splash/fullsize=false
 config/icon="res://assets/icons/logo.png"
 boot_splash/minimum_display_time=3
 
+[autoload]
+
+Global="*res://scripts/global.gd"
+
 [display]
 
 window/stretch/mode="viewport"

@@ -59,7 +59,10 @@ func _physics_process(_delta):
 		
 func _shoot():
 	if bullet:
-		shoot.play()
+		# Check SFX Status
+		if Global.sfx_status:
+			shoot.play()
+			
 		var bullet_instance: Node2D = bullet.instantiate()
 		bullet_instance.dir = rotation
 		bullet_instance.rotation = rotation

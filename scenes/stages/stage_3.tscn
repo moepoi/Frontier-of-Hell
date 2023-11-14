@@ -314,7 +314,6 @@ one_shot = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_1fpbf")
 volume_db = 1.0
-autoplay = true
 
 [connection signal="timeout" from="Path2D/Timer" to="Path2D" method="_on_timer_timeout"]
 [connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]

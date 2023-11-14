@@ -21,6 +21,10 @@ func _ready():
 	if OS.get_name() == "Web":
 		$TextureRect/Panel/MarginContainer/VBoxContainer/HBoxContainer/Exit.hide()
 
+    # Check BGM Status
+	if Global.bgm_status:
+		$AudioStreamPlayer.play()
+
 func _on_logo_pressed():
 	if timer.is_stopped():
 		timer.start()
@@ -50,6 +54,15 @@ func _on_how_to_play_pressed():
 
 func _on_about_pressed():
 	get_tree().change_scene_to_file("res://scenes/ui/about.tscn")
+
+func _on_settings_pressed():
+	get_tree().change_scene_to_file("res://scenes/ui/settings.tscn")
+
+func _on_settings_hold():
+	$TextureRect/Panel/Settings.modulate = Color(0.541176, 0.541176, 0.541176, 1)
+
+func _on_settings_release():
+	$TextureRect/Panel/Settings.modulate = Color(1, 1, 1, 1)
 
 func _on_exit_pressed():
 	get_tree().quit()

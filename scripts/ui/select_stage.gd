@@ -36,6 +36,10 @@ func _ready():
 		_:
 			pass
 
+    # Check BGM Status
+	if Global.bgm_status:
+		$AudioStreamPlayer.play()
+
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
 

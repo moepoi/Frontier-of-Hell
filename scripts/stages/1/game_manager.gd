@@ -23,6 +23,10 @@ func _ready():
 	# Init Engine time scale
 	Engine.time_scale = 1.0
 
+	# Check BGM Status
+	if Global.bgm_status:
+		$AudioStreamPlayer.play()
+
 	# Set Duration & Start Timer
 	duration.wait_time = config.game['duration']
 	duration.start()
