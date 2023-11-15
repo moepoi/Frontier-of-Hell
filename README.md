@@ -4,7 +4,7 @@
 
 
 <p align="center">
-  <a href="https://git.moe.team/moepoi/Frontier-of-Hell">
+  <a href="https://frontier-of-hell.moe.team">
     <img src="https://telegra.ph/file/a918724e0cf06e890aeed.png" width="400" alt="Frontier of Hell">
   </a>
 </p>
@@ -17,7 +17,7 @@
 
 ## Download
 - Windows, Linux, Android : [Github Release](https://github.com/moepoi/Frontier-of-Hell/releases)
-- Android : [AppCenter](https://install.appcenter.ms/users/moepoi/apps/frontier-of-hell/distribution_groups/public)
+- Android : [ApkPure](https://apkpure.com/frontier-of-hell/dev.moepoi.frontierofhell) & [AppCenter](https://install.appcenter.ms/users/moepoi/apps/frontier-of-hell/distribution_groups/public)
 
 ## Contributors
 - Michael William Jonathan / [@moepoi](https://github.com/moepoi)
