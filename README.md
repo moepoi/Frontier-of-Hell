@@ -17,7 +17,7 @@
 
 ## Download
 - Windows, Linux, Android : [Github Release](https://github.com/moepoi/Frontier-of-Hell/releases)
-- Android : [Appcenter](https://install.appcenter.ms/users/moepoi/apps/Frontier-of-Hell)
+- Android : [AppCenter](https://install.appcenter.ms/users/moepoi/apps/frontier-of-hell/distribution_groups/public)
 
 ## Contributors
 - Michael William Jonathan / [@moepoi](https://github.com/moepoi)
