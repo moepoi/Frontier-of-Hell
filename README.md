@@ -16,5 +16,9 @@
 [<img src="https://img.youtube.com/vi/IATxp1SUnLw/hqdefault.jpg" width="600" height="250"
 />](https://www.youtube.com/embed/IATxp1SUnLw)
 
+## Download
+- Windows, Linux, Android : [Github Release](https://github.com/moepoi/Frontier-of-Hell/releases)
+- Android : [Appcenter](https://install.appcenter.ms/users/moepoi/apps/Frontier-of-Hell)
+
 ## Contributors
 - Michael William Jonathan / [@moepoi](https://github.com/moepoi)
