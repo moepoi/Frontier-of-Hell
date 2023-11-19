@@ -72,7 +72,10 @@ text = "Developed By :
 
 Supervisor :
 - Ir. Jeanny Pragantha, M. Eng
-- Darius Andana Haris, M. TI"
+- Darius Andana Haris, M. TI
+
+
+Version : 0.3.2-pre"
 autowrap_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
