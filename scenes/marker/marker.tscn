@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://p0lkipd6a5lu"]
+
+[ext_resource type="Texture2D" uid="uid://bdga2vyi2dpaw" path="res://assets/icons/enemy-marker-icon.png" id="1_j1bap"]
+[ext_resource type="Script" path="res://scripts/marker/marker.gd" id="1_tysk2"]
+[ext_resource type="Texture2D" uid="uid://o2dc3vcnnd4t" path="res://assets/icons/enemy-marker-arrow.png" id="2_f8i1v"]
+
+[node name="marker" type="Node2D"]
+script = ExtResource("1_tysk2")
+
+[node name="base" type="Sprite2D" parent="."]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_j1bap")
+
+[node name="left" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-30, 0)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_f8i1v")
+
+[node name="up" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -30)
+rotation = 1.5708
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_f8i1v")
+
+[node name="down" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 30)
+rotation = 4.71239
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_f8i1v")
+
+[node name="right" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(30, 0)
+rotation = 3.14159
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_f8i1v")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

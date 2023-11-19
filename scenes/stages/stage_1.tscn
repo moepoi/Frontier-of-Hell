@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=19 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
 [ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="2_bnj71"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://r8kq68v8iflb" path="res://scenes/ui/victory.tscn" id="8_wl8vl"]
 [ext_resource type="PackedScene" uid="uid://wywjvwp7ausj" path="res://scenes/ui/defeat.tscn" id="9_huvna"]
 [ext_resource type="AudioStream" uid="uid://bn6agbc77m0au" path="res://assets/audio/stage.mp3" id="12_2v5rl"]
+[ext_resource type="PackedScene" uid="uid://p0lkipd6a5lu" path="res://scenes/marker/marker.tscn" id="13_qa2m6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7yb1o"]
 texture = ExtResource("2_bnj71")
@@ -593,6 +594,10 @@ position = Vector2(1179, 543)
 
 [node name="base3" parent="Bases" instance=ExtResource("8_rsf1n")]
 position = Vector2(1178, 460)
+
+[node name="marker" parent="." instance=ExtResource("13_qa2m6")]
+position = Vector2(117, 213)
+direction = "left"
 
 [node name="Duration" type="Timer" parent="."]
 one_shot = true

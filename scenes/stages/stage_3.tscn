@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bxk5llqn5csgu"]
+[gd_scene load_steps=17 format=3 uid="uid://bxk5llqn5csgu"]
 
 [ext_resource type="Texture2D" uid="uid://bq6hnxbt4w37u" path="res://assets/tileset/snowland/Snowland@64x64.png" id="1_l1d1t"]
 [ext_resource type="Script" path="res://scripts/stages/3/game_manager.gd" id="1_u4jwa"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://wywjvwp7ausj" path="res://scenes/ui/defeat.tscn" id="9_4p6iy"]
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="9_057um"]
 [ext_resource type="AudioStream" uid="uid://bn6agbc77m0au" path="res://assets/audio/stage.mp3" id="12_1fpbf"]
+[ext_resource type="PackedScene" uid="uid://p0lkipd6a5lu" path="res://scenes/marker/marker.tscn" id="12_wt6oj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xqebe"]
 texture = ExtResource("1_l1d1t")
@@ -307,6 +308,10 @@ position = Vector2(-37, 541)
 
 [node name="base3" parent="Bases" instance=ExtResource("9_057um")]
 position = Vector2(-36, 587)
+
+[node name="marker" parent="." instance=ExtResource("12_wt6oj")]
+position = Vector2(733, 82)
+direction = "up"
 
 [node name="Duration" type="Timer" parent="."]
 one_shot = true
