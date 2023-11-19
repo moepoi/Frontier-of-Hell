@@ -51,11 +51,14 @@ func _physics_process(_delta):
 	if enemies.is_empty():
 		$AnimatedSprite2D.stop()
 	else:
-		var distance = global_position.distance_to(enemies[0].global_position)
-		_update_look_at(enemies[0].global_position + enemies[0].enemy_vol * (distance / speed))
-		if timer.is_stopped():
-			$AnimatedSprite2D.play("default")
-			_shoot()
+		if !enemies[0].is_dead:
+			var distance = global_position.distance_to(enemies[0].global_position)
+			_update_look_at(enemies[0].global_position + enemies[0].enemy_vol * (distance / speed))
+			if timer.is_stopped():
+				$AnimatedSprite2D.play("default")
+				_shoot()
+		else:
+			enemies.erase(enemies[0])
 		
 func _shoot():
 	if bullet:

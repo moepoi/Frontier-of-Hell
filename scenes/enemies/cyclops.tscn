@@ -305,4 +305,9 @@ show_percentage = false
 [node name="SlowTimer" type="Timer" parent="EnemyBody"]
 one_shot = true
 
+[node name="DeadTimer" type="Timer" parent="EnemyBody"]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="timeout" from="EnemyBody/SlowTimer" to="." method="_on_slow_timer_timeout"]
+[connection signal="timeout" from="EnemyBody/DeadTimer" to="." method="_on_dead_timer_timeout"]
