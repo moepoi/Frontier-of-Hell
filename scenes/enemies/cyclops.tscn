@@ -163,7 +163,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jyf0d")
 }],
-"loop": true,
+"loop": false,
 "name": &"back_dead",
 "speed": 5.0
 }, {
@@ -197,7 +197,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rrkc6")
 }],
-"loop": true,
+"loop": false,
 "name": &"front_dead",
 "speed": 5.0
 }, {
@@ -231,7 +231,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qpspw")
 }],
-"loop": true,
+"loop": false,
 "name": &"left_dead",
 "speed": 5.0
 }, {
@@ -265,7 +265,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ftvcv")
 }],
-"loop": true,
+"loop": false,
 "name": &"right_dead",
 "speed": 5.0
 }]
@@ -286,10 +286,8 @@ script = ExtResource("1_vqyfw")
 position = Vector2(9.15527e-05, 0.00012207)
 scale = Vector2(0.09, 0.089)
 sprite_frames = SubResource("SpriteFrames_2gjkv")
-animation = &"right_dead"
+animation = &"back"
 autoplay = "right"
-frame = 2
-frame_progress = 0.575532
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyBody"]
 position = Vector2(-0.992983, 1.00696)
