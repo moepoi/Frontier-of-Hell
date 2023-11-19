@@ -79,12 +79,14 @@ func slow():
 		slowTimer.stop()
 		slowTimer.start()
 	else:
+		$EnemyBody/AnimatedSprite2D.modulate = Color(0.0627, 0.3137, 0.4588, 1)
 		speed = speed - (0.3 * speed)
 		is_slow = true
 		slowTimer.wait_time = 6.0
 		slowTimer.start()
 
 func _on_slow_timer_timeout():
+	$EnemyBody/AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 	speed = config.enemy[enemy_id]['speed']
 	is_slow = false
 
