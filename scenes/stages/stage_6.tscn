@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcecwku0if8tg"]
+[gd_scene load_steps=20 format=3 uid="uid://dcecwku0if8tg"]
 
 [ext_resource type="Script" path="res://scripts/stages/6/game_manager.gd" id="1_04mdc"]
 [ext_resource type="Texture2D" uid="uid://d36b03p0hs8kw" path="res://assets/tileset/ashlands/ashlands-32x32.png" id="1_a4nl1"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://wywjvwp7ausj" path="res://scenes/ui/defeat.tscn" id="10_fyg8a"]
 [ext_resource type="AudioStream" uid="uid://bn6agbc77m0au" path="res://assets/audio/stage.mp3" id="12_is64a"]
 [ext_resource type="PackedScene" uid="uid://p0lkipd6a5lu" path="res://scenes/marker/marker.tscn" id="12_xutrf"]
+[ext_resource type="Texture2D" uid="uid://dca4npsxwr1m3" path="res://assets/icons/base-mark.png" id="14_f4lh3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ebym7"]
 texture = ExtResource("1_a4nl1")
@@ -648,6 +649,18 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(851979, 1507338, 16, 786444, 1376266, 16, 786452, 1310730, 16, 851989, 1441802, 16, 1245209, 1507338, 16, 1179678, 1638410, 14, 1114143, 1507338, 14, 1114140, 1441802, 14, 589827, 1638410, 14, 327698, 1507338, 16, 393246, 1376266, 16, 524319, 1310730, 16, 1179659, 1441802, 14, 1179660, 1376266, 14, 589853, 1703946, 12, 393238, 1703946, 12, 786450, 1703946, 12, 393227, 1703946, 12, 851974, 1703946, 12, 327713, 1638410, 14, 393247, 1507338, 14, 262174, 1441802, 14, 262157, 1376266, 14, 262158, 1310730, 15, 196624, 1507338, 14, 1114136, 1703946, 12)
+
+[node name="BaseMark" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(704, 610)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("14_f4lh3")
+
+[node name="BaseMark2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(128, 610)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("14_f4lh3")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_iccfv")

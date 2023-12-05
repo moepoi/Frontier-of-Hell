@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bxk5llqn5csgu"]
+[gd_scene load_steps=18 format=3 uid="uid://bxk5llqn5csgu"]
 
 [ext_resource type="Texture2D" uid="uid://bq6hnxbt4w37u" path="res://assets/tileset/snowland/Snowland@64x64.png" id="1_l1d1t"]
 [ext_resource type="Script" path="res://scripts/stages/3/game_manager.gd" id="1_u4jwa"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cikgeqqhctm7k" path="res://scenes/base/base.tscn" id="9_057um"]
 [ext_resource type="AudioStream" uid="uid://bn6agbc77m0au" path="res://assets/audio/stage.mp3" id="12_1fpbf"]
 [ext_resource type="PackedScene" uid="uid://p0lkipd6a5lu" path="res://scenes/marker/marker.tscn" id="12_wt6oj"]
+[ext_resource type="Texture2D" uid="uid://dca4npsxwr1m3" path="res://assets/icons/base-mark.png" id="14_w4pps"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xqebe"]
 texture = ExtResource("1_l1d1t")
@@ -260,6 +261,12 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(65551, 327680, 11, 196624, 196608, 7, 196622, 196608, 7, 65549, 524288, 11, 196621, 720896, 12, 65537, 917504, 15, 589840, 786432, 5)
+
+[node name="BaseMark" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(46, 547)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("14_w4pps")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_cwxcl")

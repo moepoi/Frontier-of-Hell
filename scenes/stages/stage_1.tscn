@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://btdewn34d67m"]
+[gd_scene load_steps=20 format=3 uid="uid://btdewn34d67m"]
 
 [ext_resource type="Script" path="res://scripts/stages/1/game_manager.gd" id="1_aosti"]
 [ext_resource type="Texture2D" uid="uid://cnxj0mf3luxo" path="res://assets/tileset/ashlands/tf_A5_ashlands_3.png" id="2_bnj71"]
 [ext_resource type="Texture2D" uid="uid://danbfdqmqu23q" path="res://assets/tileset/ashlands/tf_B_ashlands_3.png" id="3_mc5mi"]
+[ext_resource type="Texture2D" uid="uid://dca4npsxwr1m3" path="res://assets/icons/base-mark.png" id="4_1ac5p"]
 [ext_resource type="Script" path="res://scripts/stages/1/summon.gd" id="4_gt08o"]
 [ext_resource type="PackedScene" uid="uid://bhnv1dsggssil" path="res://scenes/ui/pause_menu.tscn" id="5_0gif7"]
 [ext_resource type="PackedScene" uid="uid://cd5r1v6f8hahx" path="res://scenes/ui/tower_menu.tscn" id="5_3w5lp"]
@@ -546,6 +547,12 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(196628, 262146, 6, 131089, 2, 13, 720899, 327682, 4, 655364, 196610, 4, 589826, 262146, 12, 589830, 196610, 12)
+
+[node name="BaseMark" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+position = Vector2(1099, 507)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("4_1ac5p")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_csucy")
