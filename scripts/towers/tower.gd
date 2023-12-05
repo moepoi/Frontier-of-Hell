@@ -73,7 +73,6 @@ func _shoot():
 		bullet_instance.speed = speed
 		bullet_instance.damage = damage
 		bullet_instance.area_damage = area_damage
-		bullet_instance.area_damage_target = enemies
 		bullet_instance.slow_effect = slow_effect
 		get_tree().current_scene.add_child(bullet_instance)
 		health -= durability_reduction
