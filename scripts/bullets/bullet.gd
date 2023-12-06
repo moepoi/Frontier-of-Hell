@@ -29,7 +29,7 @@ func _on_Bullet_body_entered(body):
 			$AnimatedSprite2D.play("default")
 			for enemy in enemies:
 				enemy.hit(damage)
-			await get_tree().create_timer(1).timeout
+			await get_tree().create_timer(0.5).timeout
 		elif slow_effect:
 			body.get_parent().hit(damage)
 			body.get_parent().slow()
