@@ -75,7 +75,7 @@ Supervisor :
 - Darius Andana Haris, M. TI
 
 
-Version : 0.4.0"
+Version : 0.5.0"
 autowrap_mode = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
